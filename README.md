@@ -1,8 +1,16 @@
-# Guided navigation
+# Guided Navigation
 
-This document introduces a new JSON based syntax to provide a guided navigation experience in a Readium Web Publication Manifest.
+Guided navigation offers an alternative reading experience through a sequence of media fragments, meant to be presented in parallel.
 
-## Model
+This document defines a syntax for Guided Navigation Documents, serialized in JSON and meant to be references in a [Readium Web Publication Manifest](https://readium.org/webpub-manifest).
+
+## Use cases
+
+* Synchronizing text with pre-recorded audio, for example in order to support [Media Overlays in EPUB](https://www.w3.org/TR/epub/#sec-media-overlays) or to distribute accessible audiobooks.
+* Panel by panel navigation in comics/manga to facilitate reading this type of content on smaller screens.
+* Providing a textual transcript and/or image descriptions in a [Divina publication](https://readium.org/webpub-manifest/profiles/divina).
+
+## Syntax
 
 The new syntax is based around a single JSON object called a Guided Navigation Object:
 
@@ -22,26 +30,30 @@ Each Guided Navigation Object <strong class="rfc">must</strong> contain:
 
 ## Roles
 
-- <https://www.w3.org/TR/epub-ssv-11/>
+> As a starting point, we'll use the [EPUB Structural Semantics Vocabulary](https://www.w3.org/TR/epub-ssv-11/) along with SMIL as starting points for our list of roles. 
+> 
+> This will most likely end up with a mix of general and specialized vocabularies.
 
 ## Fragments
 
-- Audio: <https://www.w3.org/TR/media-frags/#naming-time>
-- Images:
-  - Rectangular regions: <https://www.w3.org/TR/media-frags/#naming-space>
-  - Polygonal regions: <https://idpf.org/epub/renditions/region-nav/#sec-3.5.1>
-- Text:
-  - Fragment ID: `#identifier` 
-  - Text fragments: <https://wicg.github.io/scroll-to-text-fragment/>
+> The following media fragments have been identified as potential candidates for fragments in `audioref`, `imgref` and `textref`:
+> 
+>- Audio: <https://www.w3.org/TR/media-frags/#naming-time>
+>- Images:
+>  - Rectangular regions: <https://www.w3.org/TR/media-frags/#naming-space>
+>  - Polygonal regions: <https://idpf.org/epub/renditions/region-nav/#sec-3.5.1>
+>- Text:
+>  - Fragment ID: `#identifier` 
+>  - Text fragments: <https://wicg.github.io/scroll-to-text-fragment/>
 
-## Listing Guided Navigation Documents
+## Linking to a Guided Navigation Document
 
 ### Publication-level
 
 ```json
 "links": [
   {
-    "rel": "alternate,
+    "rel": "alternate",
     "href": "guided.json",
     "type": "application/guided-navigation+json"
   }
@@ -71,26 +83,7 @@ A publication <strong class="rfc">must</strong> include a [`duration`](https://r
 
 ## Examples
 
-*Example 1: Guided navigation in a comicbook*
-
-```json
-{
-  "role": ["page"],
-  "imgref": "page10.jpg",
-  "children": [
-    {
-      "role": ["panel"]
-      "imgref": "page10.jpg#xywh=percent:10,10,60,40"
-    },
-    {
-      "role": ["panel"]
-      "imgref": "page10.jpg#xywh=percent:70,50,30,50"
-    }
-  ]
-}
-```
-
-*Example 2: Guided navigation between text and audio*
+*Example 1: Synchronizing text with pre-recorded audio*
 
 ```json
 {
@@ -109,7 +102,64 @@ A publication <strong class="rfc">must</strong> include a [`duration`](https://r
 }
 ```
 
-*Example 3: Text equivalent of a speech bubble in a comic book*
+*Example 2: Synchronizing an audiobook with text using references*
+
+```json
+{
+  "textref": "chapter1.mp3",
+  "role": ["chapter"],
+  "children": [
+    {
+      "audioref": "chapter1.mp3#t=0,20",
+      "textref": "chapter1.html#par1"
+    },
+    { 
+      "audioref": "chapter1.mp3#t=20,28",
+      "textref": "chapter1.html#par2"
+    }
+  ]
+}
+```
+
+*Example 3: Synchronizing an audiobook with text using embedded text*
+
+```json
+{
+  "textref": "chapter1.mp3",
+  "role": ["chapter"],
+  "children": [
+    {
+      "audioref": "chapter1.mp3#t=0,7",
+      "text": "This is the first sentence in this audiobook."
+    },
+    { 
+      "audioref": "chapter1.mp3#t=8,16",
+      "text": "Which is followed by a second, slightly longer sentence."
+    }
+  ]
+}
+```
+
+*Example 4: Guided navigation in a manga*
+
+```json
+{
+  "role": ["page"],
+  "imgref": "page10.jpg",
+  "children": [
+    {
+      "role": ["panel"]
+      "imgref": "page10.jpg#xywh=percent:10,10,60,40"
+    },
+    {
+      "role": ["panel"]
+      "imgref": "page10.jpg#xywh=percent:70,50,30,50"
+    }
+  ]
+}
+```
+
+*Example 5: Text equivalent of a speech bubble in a comic book*
 
 ```json
 {
@@ -127,8 +177,36 @@ A publication <strong class="rfc">must</strong> include a [`duration`](https://r
 
 ## TODO
 
-- [ ] Synthetic spread: [spec](https://idpf.org/epub/renditions/region-nav/#sec-3.5.2) and [example](https://idpf.org/epub/renditions/region-nav/#app-a.2)
-- [ ] Descriptions ?
+- Spreads: [Region-based navigation](https://idpf.org/epub/renditions/region-nav/#sec-3.5.2) and [example](https://idpf.org/epub/renditions/region-nav/#app-a.2)
+- Descriptions
+
+### Potential format for spreads
+
+| Name | Description | Format |
+| ---- | ----------- | ------ |
+| `spread` | Two or more references to images or regions of different images. | URI |
+
+*Example: Two pages spread that contains a panel across the entire spread*
+
+```json
+{
+  "role": ["spread"],
+  "spread": [
+    "page2.jpg", 
+    "page3.jpg"
+  ]
+  "children": [
+    {
+      "role": ["panel"]
+      "spread": [
+        "page2.jpg#xywh=percent:0,0,100,20",
+        "page3.jpg#xywh=percent:0,0,100,20"
+      ]
+    }
+  ]
+}
+```
+
 
 ### Potential format for descriptions
 
