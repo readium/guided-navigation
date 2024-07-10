@@ -159,11 +159,11 @@ A publication <strong class="rfc">must</strong> include a [`duration`](https://r
   "imgref": "page10.jpg",
   "children": [
     {
-      "role": ["panel"]
+      "role": ["panel"],
       "imgref": "page10.jpg#xywh=percent:10,10,60,40"
     },
     {
-      "role": ["panel"]
+      "role": ["panel"],
       "imgref": "page10.jpg#xywh=percent:70,50,30,50"
     }
   ]
@@ -178,7 +178,7 @@ A publication <strong class="rfc">must</strong> include a [`duration`](https://r
   "imgref": "page10.jpg#xywh=percent:10,10,60,40",
   "children": [
     {
-      "role": ["balloon"]
+      "role": ["balloon"],
       "imgref": "page10.jpg#xywh=percent:10,10,20,20",
       "text": "This is a dialogue in a speech bubble."
     }
@@ -236,7 +236,7 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 
 | Name | Description | Format |
 | ---- | ----------- | ------ |
-| `description` | Text, audio or image description for the current Guided Navigation Object. | Object |
+| `description` | Text, audio or image description for the current Guided Navigation Object. | Guided Navigation Object without `children` |
 
 *Example: Audio and text description for an image*
 
@@ -250,7 +250,7 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
   },
   "children": [
     {
-      "role": ["balloon"]
+      "role": ["balloon"],
       "imgref": "page10.jpg#xywh=percent:10,10,20,20",
       "text": "This is a dialogue in a speech bubble."
     }

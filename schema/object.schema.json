@@ -20,7 +20,10 @@
       "type": "string"
     },
     "role": {
-      "type": "string"
+      "type": ["string", "array"],
+      "items": {
+        "type": "string"
+      }
     },
     "children": {
       "type": "array",
@@ -32,16 +35,16 @@
   },
   "anyOf": [
     {
-      "required": "audioref"
+      "required": ["audioref"]
     },
     {
-      "required": "imgref"
+      "required": ["imgref"]
     },
     {
-      "required": "textref"
+      "required": ["textref"]
     },
     {
-      "required": "children"
+      "required": ["children"]
     }
   ]
 }
