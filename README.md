@@ -7,48 +7,45 @@ This document defines a syntax for Guided Navigation Documents, serialized in JS
 ## Use cases
 
 * Synchronizing text with pre-recorded audio, for example in order to support [Media Overlays in EPUB](https://www.w3.org/TR/epub/#sec-media-overlays) or to distribute accessible audiobooks.
-* Panel by panel navigation in comics/manga to facilitate reading this type of content on smaller screens.
-* Providing a textual transcript and/or image descriptions in a [Divina publication](https://readium.org/webpub-manifest/profiles/divina).
+* Panel by panel navigation in comics/manga to facilitate reading on smaller screens.
+* Providing a textual transcript and/or image descriptions for high illustrated publications such as [Divina](https://readium.org/webpub-manifest/profiles/divina).
 
-## Syntax
 
-The new syntax is based around a single JSON object called a Guided Navigation Object:
+## 1. Guided Navigation Documents
+
+Guided Navigation Documents <strong class="rfc">must</strong> be identified using the following media type: `application/guided-navigation+json`.
+
+### 1.1. Top-level properties
+
+| Name | Description | Format | Required? |
+| ---- | ----------- | ------ | ---------- |
+| `links` | References to other resources that are related to the current Guided Navigation Document. | An array of [Link Objects](https://readium.org/webpub-manifest/#24-the-link-object) | No |
+| `guided` | A sequence of resources and/or media fragments into these resources, meant to be presented sequentially to the user. | An array of [Guided Navigation Objects](#12-guided-navigation-object) | Yes |
+
+### 1.2. Guided Navigation Object
+
 
 | Name | Description | Format |
 | ---- | ----------- | ------ |
 | `audioref` | Points to a media fragment in an audio resource. | URI |
 | `children` | Array of Guided Navigation Objects. | Guided Navigation Objects |
 | `imgref` | Points to a media fragment in an image resource. | URI |
-| `role`     | Array of roles relevant for the current Sync Media Object. | Array of roles |
-| `text`  | Text equivalent for the current Guided Navigation Object. | String |
+| `role`     | Array of roles relevant for the current Guided Navigation Object. | Array of roles |
+| `text`  | Textual equivalent of the resources or fragment of the resources referenced by the current Guided Navigation Object. | String |
 | `textref`  | Points to a media fragment in an HTML/XHTML resource. | URI |
 
-Each Guided Navigation Object <strong class="rfc">must</strong> contain:
+Each Guided Navigation Object <strong class="rfc">must</strong> either contain:
 
 - a `children` object containg at least one Guided Navigation Object
-- or one of the following elements: `audioref`, `imgref`, `text` or `textref`
+- or one of the following elements: `audioref`, `imgref` or `textref`
 
-## Roles
+## 2. Guided navigation in a publication
 
-> As a starting point, we'll use the [EPUB Structural Semantics Vocabulary](https://www.w3.org/TR/epub-ssv-11/) along with SMIL as starting points for our list of roles. 
-> 
-> This will most likely end up with a mix of general and specialized vocabularies.
+### 2.1. Metadata requirements
 
-## Fragments
+A publication <strong class="rfc">must</strong> include a [`duration`](https://readium.org/webpub-manifest/contexts/default/#duration-and-number-of-pages) if it references a Guided Navigation Document using audio.
 
-> The following media fragments have been identified as potential candidates for fragments in `audioref`, `imgref` and `textref`:
-> 
->- Audio: <https://www.w3.org/TR/media-frags/#naming-time>
->- Images:
->  - Rectangular regions: <https://www.w3.org/TR/media-frags/#naming-space>
->  - Polygonal regions: <https://idpf.org/epub/renditions/region-nav/#sec-3.5.1>
->- Text:
->  - Fragment ID: `#identifier` 
->  - Text fragments: <https://wicg.github.io/scroll-to-text-fragment/>
-
-## Linking to a Guided Navigation Document
-
-### Publication-level
+### 2.2. Publication-level
 
 ```json
 "links": [
@@ -60,7 +57,7 @@ Each Guided Navigation Object <strong class="rfc">must</strong> contain:
 ]
 ```
 
-### Link-level
+### 2.2. Link-level
 
 ```json
 "readingOrder": [
@@ -77,11 +74,25 @@ Each Guided Navigation Object <strong class="rfc">must</strong> contain:
 ]
 ```
 
-## Publication metadata
+## 3. Fragments
 
-A publication <strong class="rfc">must</strong> include a [`duration`](https://readium.org/webpub-manifest/contexts/default/#duration-and-number-of-pages) if it provides guided navigation using audio.
+> The following media fragments have been identified as potential candidates for fragments in `audioref`, `imgref` and `textref`:
+> 
+>- Audio: <https://www.w3.org/TR/media-frags/#naming-time>
+>- Images:
+>  - Rectangular regions: <https://www.w3.org/TR/media-frags/#naming-space>
+>  - Polygonal regions: <https://idpf.org/epub/renditions/region-nav/#sec-3.5.1>
+>- Text:
+>  - Fragment ID: `#identifier` 
+>  - Text fragments: <https://wicg.github.io/scroll-to-text-fragment/>
 
-## Examples
+## 4. Roles
+
+> As a starting point, we'll use the [EPUB Structural Semantics Vocabulary](https://www.w3.org/TR/epub-ssv-11/) along with SMIL as starting points for our list of roles. 
+> 
+> This will most likely end up with a mix of general and specialized vocabularies.
+
+## Appendix A - Examples
 
 *Example 1: Synchronizing text with pre-recorded audio*
 
@@ -175,10 +186,22 @@ A publication <strong class="rfc">must</strong> include a [`duration`](https://r
 }
 ```
 
-## TODO
+## Appendix B - JSON Schema
+
+The following JSON Schemas are available under version control: 
+
+- Guided Navigation Document: <https://github.com/readium/guided-navigation/blob/master/schema/document.schema.json>
+- Guided Navigation Object: <https://github.com/readium/guided-navigation/blob/master/schema/object.schema.json>
+
+For the purpose of validating a Readium Guided Navigation Document, use the following JSON Schema resource: 
+
+- <https://readium.org/guided-navigation/schema/document.schema.json>
+
+## Appendix C - TODO
 
 - Spreads: [Region-based navigation](https://idpf.org/epub/renditions/region-nav/#sec-3.5.2) and [example](https://idpf.org/epub/renditions/region-nav/#app-a.2)
 - Descriptions
+- SSML support for `text`?
 
 ### Potential format for spreads
 

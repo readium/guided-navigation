@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://readium.org/guided-navigation/schema/object.schema.json",
+  "title": "Readium Guided Navigation object",
+  "type": "object",
+  "properties": {
+    "audioref": {
+      "type": "string",
+      "format": "uri-reference"
+    },
+    "imgref": {
+      "type": "string",
+      "format": "uri-reference"
+    },
+    "textref": {
+      "type": "string",
+      "format": "uri-reference"
+    },
+    "text": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "children": {
+      "type": "array",
+      "items": {
+        "$ref": "object.schema.json"
+      },
+      "minItems": 1
+    }
+  }
+}
