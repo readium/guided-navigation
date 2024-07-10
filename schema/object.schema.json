@@ -29,5 +29,19 @@
       },
       "minItems": 1
     }
-  }
+  },
+  "anyOf": [
+    {
+      "required": "audioref"
+    },
+    {
+      "required": "imgref"
+    },
+    {
+      "required": "textref"
+    },
+    {
+      "required": "children"
+    }
+  ]
 }
