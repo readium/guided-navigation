@@ -57,7 +57,7 @@ A publication <strong class="rfc">must</strong> include a [`duration`](https://r
 ]
 ```
 
-### 2.2. Link-level
+### 2.3. Link-level
 
 ```json
 "readingOrder": [
@@ -199,11 +199,12 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 
 ## Appendix C - TODO
 
-- Spreads: [Region-based navigation](https://idpf.org/epub/renditions/region-nav/#sec-3.5.2) and [example](https://idpf.org/epub/renditions/region-nav/#app-a.2)
-- Descriptions
-- SSML support for `text`?
+### Potential format for `spread`
 
-### Potential format for spreads
+> References:
+>  
+> * [EPUB Region-Based Navigation 1.0](https://idpf.org/epub/renditions/region-nav/#sec-3.5.2)
+> * [Example](https://idpf.org/epub/renditions/region-nav/#app-a.2)
 
 | Name | Description | Format |
 | ---- | ----------- | ------ |
@@ -231,7 +232,7 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 ```
 
 
-### Potential format for descriptions
+### Potential format for `description`
 
 | Name | Description | Format |
 | ---- | ----------- | ------ |
@@ -254,5 +255,20 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
       "text": "This is a dialogue in a speech bubble."
     }
   ]
+}
+```
+
+### Potential object representation for `text`
+
+*Example: Text representation with both plain text and SSML*
+
+```json
+{
+    "imgref": "page10.jpg#xywh=percent:10,10,20,20",
+    "text": {
+      "plain": "The SSML standard is defined by the W3C.",
+      "language": "en",
+      "ssml": "<speak>The <say-as interpret-as=\"characters\">SSML</say-as>standard <break time=\"1s\"/>is defined by the<sub alias=\"World Wide Web Consortium\">W3C</sub>.</speak>"
+    }
 }
 ```
