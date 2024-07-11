@@ -88,9 +88,10 @@ A publication <strong class="rfc">must</strong> include a [`duration`](https://r
 
 ## 4. Roles
 
-> As a starting point, we'll use the [EPUB Structural Semantics Vocabulary](https://www.w3.org/TR/epub-ssv-11/) along with SMIL as starting points for our list of roles. 
-> 
-> This will most likely end up with a mix of general and specialized vocabularies.
+> As a starting point, we'll use [Digital Publishing WAI-ARIA Module 1.0]() along with HTML semantics.
+> For comics, we'll look into [EPUB Structural Semantics Vocabulary](https://www.w3.org/TR/epub-ssv-11/) as well, but it feels oddly too specific and not enough at the same time. 
+
+*For now this is a work in progress in a separate document: [List of roles](role.md)* 
 
 ## Appendix A - Examples
 
