@@ -91,7 +91,7 @@ A publication <strong class="rfc">must</strong> include a [`duration`](https://r
 > As a starting point, we'll use [Digital Publishing WAI-ARIA Module 1.0]() along with HTML semantics.
 > For comics, we'll look into [EPUB Structural Semantics Vocabulary](https://www.w3.org/TR/epub-ssv-11/) as well, but it feels oddly too specific and not enough at the same time. 
 
-*For now this is a work in progress in a separate document: [List of roles](role.md)* 
+*For now this is a work in progress in a separate document: [List of roles](roles.md)* 
 
 ## Appendix A - Examples
 

@@ -21,8 +21,10 @@
     },
     "role": {
       "type": ["string", "array"],
+      "$ref": "roles.schema.json",
       "items": {
-        "type": "string"
+        "type": "string",
+        "$ref": "roles.schema.json"
       }
     },
     "children": {
