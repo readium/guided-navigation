@@ -1,8 +1,17 @@
-# Guided Navigation
+# Readium Guided Navigation
 
 Guided navigation offers an alternative reading experience through a sequence of media fragments, meant to be presented in parallel.
 
 This document defines a syntax for Guided Navigation Documents, serialized in JSON and meant to be references in a [Readium Web Publication Manifest](https://readium.org/webpub-manifest).
+
+**Editors:**
+
+* Hadrien Gardeur
+
+**Participate:**
+
+* [GitHub](https://github.com/readium/guided-navigation/)
+* [Discussions](https://github.com/readium/guided-navigation/discussions/)
 
 ## Use cases
 
