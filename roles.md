@@ -1,5 +1,19 @@
 # Roles
 
+## Inherited from HTML and/or ARIA
+
+| Role | EPUB type equivalent | ARIA role | HTML element | Definition |
+| ---- | -------------------- | --------- | ------------ | ---------- |
+| `aside` | [`aside`](https://www.w3.org/TR/epub-ssv-11/#sec-asides) | | `<aside>` | Secondary or supplementary content. |
+| `blockquote` | | | `<blockquote>` | Represents a section that is quoted from another source. |
+| `figure` | [`figure`](https://www.w3.org/TR/epub-ssv-11/#sec-figures) | | `<figure>` |An illustration, diagram, photo, code listing or similar, referenced from the text of a work, and typically annotated with a title, caption and/or credits. |
+| `list` | [`list`](https://www.w3.org/TR/epub-ssv-11/#sec-lists) | `list` | | A structure that contains an enumeration of related content items. |
+| `listitem` | [`list-item`](https://www.w3.org/TR/epub-ssv-11/#sec-lists)  | `listitem`| |  A single item in an enumeration. |
+| `table` | [`table`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | `table` | `<table>` | A structure containing data or content laid out in tabular form. |
+| `cell` | [`table-cell`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) |  `cell` | | A single cell of tabular data or content. |
+| `row` | [`table-row`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | `row` | | A row of data or content in a tabular structure. |
+| `section` | | | `<section>` | Represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. |
+
 ## Inherited from DPUB ARIA 1.0
 
 | Role | ARIA equivalent | EPUB type equivalent | Definition |
@@ -40,18 +54,6 @@
 | `subtitle` | [`doc-subtitle`](https://www.w3.org/TR/dpub-aria-1.0/#doc-subtitle) | [`subtitle`](https://www.w3.org/TR/epub-ssv-11/#sec-titles) | An explanatory or alternate title for the work, or a section or component within it. |
 | `tip` | [`doc-tip`](https://www.w3.org/TR/dpub-aria-1.0/#doc-tip) | [`tip`](https://www.w3.org/TR/epub-ssv-11/#sec-complementary) | Helpful information that clarifies some aspect of the content or assists in its comprehension. |
 | `toc` | [`doc-toc`](https://www.w3.org/TR/dpub-aria-1.0/#doc-toc) | [`toc`](https://www.w3.org/TR/epub-ssv-11/#sec-navigation) | A navigational aid that provides an ordered list of links to the major sectional headings in the content. A table of contents may cover an entire work, or only a smaller section of it. |
-
-## Inherited from EPUB 3 Structural Semantics Vocabulary 1.1
-
-| Role | EPUB type equivalent | Definition |
-| ---- | -------------------- | ---------- |
-| `aside` | [`aside`](https://www.w3.org/TR/epub-ssv-11/#sec-asides) | Secondary or supplementary content. |
-| `figure` | [`figure`](https://www.w3.org/TR/epub-ssv-11/#sec-figures) | An illustration, diagram, photo, code listing or similar, referenced from the text of a work, and typically annotated with a title, caption and/or credits. |
-| `list` | [`list`](https://www.w3.org/TR/epub-ssv-11/#sec-lists) | A structure that contains an enumeration of related content items. |
-| `listitem` | [`list-item`](https://www.w3.org/TR/epub-ssv-11/#sec-lists) | A single item in an enumeration. |
-| `table` | [`table`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | A structure containing data or content laid out in tabular form. |
-| `tablecell` | [`table-cell`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | A single cell of tabular data or content. |
-| `tablerow` | [`table-row`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | A row of data or content in a tabular structure. |
 
 ## List of skippable roles
 
