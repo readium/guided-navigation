@@ -36,12 +36,12 @@ Guided Navigation Documents <strong class="rfc">must</strong> be identified usin
 
 | Name | Description | Format |
 | ---- | ----------- | ------ |
-| `audioref` | Points to a media fragment in an audio resource. | URI |
-| `children` | Array of Guided Navigation Objects. | Guided Navigation Objects |
-| `imgref` | Points to a media fragment in an image resource. | URI |
-| `role`     | Array of roles relevant for the current Guided Navigation Object. | Array of roles |
+| `audioref` | References an audio resource or a fragment of it. | URI |
+| `children` | Items that are children of the containing Guided Navigation Object. | Guided Navigation Objects |
+| `imgref` | References an image or a fragment of it. | URI |
+| `role`     | Convey the structural semantics of a publication | Array of [roles](#4-roles) |
 | `text`  | Textual equivalent of the resources or fragment of the resources referenced by the current Guided Navigation Object. | String |
-| `textref`  | Points to a media fragment in an HTML/XHTML resource. | URI |
+| `textref`  | References a textual resource or a fragment of it. | URI |
 
 Each Guided Navigation Object <strong class="rfc">must</strong> either contain:
 
@@ -94,13 +94,28 @@ A publication <strong class="rfc">must</strong> include a [`duration`](https://r
 >- Text:
 >  - Fragment ID: `#identifier` 
 >  - Text fragments: <https://wicg.github.io/scroll-to-text-fragment/>
+> 
+> There are a number of open issues that relate to media fragments:
+> 
+> - Support for non-rectangular regions: <https://github.com/readium/guided-navigation/discussions/5>
+> - Support for CSS selectors and positions in `textref`: <https://github.com/readium/guided-navigation/discussions/6>
 
 ## 4. Roles
 
-> As a starting point, we'll use [Digital Publishing WAI-ARIA Module 1.0]() along with HTML semantics.
-> For comics, we'll look into [EPUB Structural Semantics Vocabulary](https://www.w3.org/TR/epub-ssv-11/) as well, but it feels oddly too specific and not enough at the same time. 
+> There are a number of open issues that relate to media fragments:
+> 
+> - Cherrypicking roles from EPUB 3 Structural Semantics Vocabulary 1.1: <https://github.com/readium/guided-navigation/discussions/2>
+> - Identifying skippable and escapable roles: <https://github.com/readium/guided-navigation/discussions/3>
+> - Defining a list of roles for Divina: <https://github.com/readium/guided-navigation/discussions/1>
 
-*For now this is a work in progress in a separate document: [List of roles](roles.md)* 
+
+Each Guided Navigation Object <strong class="rfc">should</strong> document one or more role using the `role` property.
+
+Roles are inherited from multiple specifications such as [HTML](https://html.spec.whatwg.org/), [ARIA](https://www.w3.org/TR/wai-aria-1.1/), [DPUB ARIA](https://www.w3.org/TR/dpub-aria-1.1/) and [EPUB 3 Semantics Vocabulary](https://www.w3.org/TR/epub-ssv-11/), in order to convey the structural semantics of a publication.
+
+The full list of supported roles is available at: <https://readium.org/guided-navigation/roles>
+
+Roles can be used by reading applications to implement skippability (based on user preferences, some items could be skipped) and escapability (allowing users to escape from the current context, for example escaping from the content of a table to go back to the main text).
 
 ## Appendix A - Examples
 
@@ -240,7 +255,6 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
   ]
 }
 ```
-
 
 ### Potential format for `description`
 
