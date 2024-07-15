@@ -6,13 +6,16 @@
 | ---- | -------------------- | --------- | ------------ | ---------- |
 | `aside` | [`aside`](https://www.w3.org/TR/epub-ssv-11/#sec-asides) | | `<aside>` | Secondary or supplementary content. |
 | `blockquote` | | | `<blockquote>` | Represents a section that is quoted from another source. |
-| `figure` | [`figure`](https://www.w3.org/TR/epub-ssv-11/#sec-figures) | | `<figure>` |An illustration, diagram, photo, code listing or similar, referenced from the text of a work, and typically annotated with a title, caption and/or credits. |
-| `list` | [`list`](https://www.w3.org/TR/epub-ssv-11/#sec-lists) | `list` | | A structure that contains an enumeration of related content items. |
-| `listitem` | [`list-item`](https://www.w3.org/TR/epub-ssv-11/#sec-lists)  | `listitem`| |  A single item in an enumeration. |
-| `table` | [`table`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | `table` | `<table>` | A structure containing data or content laid out in tabular form. |
-| `cell` | [`table-cell`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) |  `cell` | | A single cell of tabular data or content. |
-| `row` | [`table-row`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | `row` | | A row of data or content in a tabular structure. |
+| `caption` | | | `<caption>` or `<figcaption>` | A caption for an image or a table. |
+| `figure` | [`figure`](https://www.w3.org/TR/epub-ssv-11/#sec-figures) | `figure` | `<figure>` | An illustration, diagram, photo, code listing or similar, referenced from the text of a work, and typically annotated with a title, caption and/or credits. |
+| `image` | | `img` | `<img>` | Represents an image. |
+| `list` | [`list`](https://www.w3.org/TR/epub-ssv-11/#sec-lists) | `list` | `<ul>` or `<ol>` | A structure that contains an enumeration of related content items. |
+| `listItem` | [`list-item`](https://www.w3.org/TR/epub-ssv-11/#sec-lists)  | `listitem`| `<li>` |  A single item in an enumeration. |
+| `navigation` | | | `<nav>` | Represents a section of a page that links to other pages or to parts within the page: a section with navigation links. |
 | `section` | | | `<section>` | Represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. |
+| `table` | [`table`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | `table` | `<table>` | A structure containing data or content laid out in tabular form. |
+| `cell` | [`table-cell`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) |  `cell` | `<td>` | A single cell of tabular data or content. |
+| `row` | [`table-row`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | `row` | `<tr>` | A row of data or content in a tabular structure. |
 
 ## Inherited from DPUB ARIA 1.0
 
@@ -55,11 +58,28 @@
 | `tip` | [`doc-tip`](https://www.w3.org/TR/dpub-aria-1.0/#doc-tip) | [`tip`](https://www.w3.org/TR/epub-ssv-11/#sec-complementary) | Helpful information that clarifies some aspect of the content or assists in its comprehension. |
 | `toc` | [`doc-toc`](https://www.w3.org/TR/dpub-aria-1.0/#doc-toc) | [`toc`](https://www.w3.org/TR/epub-ssv-11/#sec-navigation) | A navigational aid that provides an ordered list of links to the major sectional headings in the content. A table of contents may cover an entire work, or only a smaller section of it. |
 
+## Inherited from EPUB 3 Structural Semantics Vocabulary 1.1
+
+| Role | EPUB type equivalent | Definition |
+| ---- | -------------------- | ---------- |
+| `landmarks` | [`landmarks`](https://w3c.github.io/epub-specs/epub33/ssv/#sec-navigation) | A short summary of the principle ideas, concepts and conclusions of the work, or of a section or excerpt within it. |
+| `loa` | [`loa`](https://w3c.github.io/epub-specs/epub33/ssv/#sec-navigation) | A listing of audio clips included in the work. |
+| `loi` | [`loi`](https://w3c.github.io/epub-specs/epub33/ssv/#sec-navigation) | A listing of illustrations included in the work. |
+| `lot` | [`lot`](https://w3c.github.io/epub-specs/epub33/ssv/#sec-navigation) | A listing of tables included in the work. |
+| `lov` | [`lov`](https://w3c.github.io/epub-specs/epub33/ssv/#sec-navigation) | A listing of video clips included in the work. |
+
 ## List of skippable roles
 
-* `endnote`
+* `bibliography`
+* `endnotes`
 * `footnote`
+* `landmarks`
+* `loa`
+* `loi`
+* `lot`
+* `lov`
 * `pagebreak`
+* `pullquote`
 
 ## List of escapable roles
 
