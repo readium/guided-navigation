@@ -31,6 +31,25 @@ Guided Navigation Documents <strong class="rfc">must</strong> be identified usin
 | `links` | References to other resources that are related to the current Guided Navigation Document. | An array of [Link Objects](https://readium.org/webpub-manifest/#24-the-link-object) | No |
 | `guided` | A sequence of resources and/or media fragments into these resources, meant to be presented sequentially to the user. | An array of [Guided Navigation Objects](#12-guided-navigation-object) | Yes |
 
+*Example:*
+
+```json
+{
+  "links": [
+    {
+      "rel": "next",
+      "href": "guided-chapter2.json"
+    }
+  ],
+  "guided": [
+    {
+      "textref": "chapter1.html",
+      "role": ["chapter"]
+    }
+  ]
+}
+```
+
 ### 1.2. Guided Navigation Object
 
 
@@ -102,7 +121,7 @@ A publication <strong class="rfc">must</strong> include a [`duration`](https://r
 
 ## 4. Roles
 
-> There are a number of open issues that relate to media fragments:
+> There are a number of open issues that relate to roles:
 > 
 > - Cherrypicking roles from EPUB 3 Structural Semantics Vocabulary 1.1: <https://github.com/readium/guided-navigation/discussions/2>
 > - Identifying skippable and escapable roles: <https://github.com/readium/guided-navigation/discussions/3>
@@ -142,7 +161,7 @@ Roles can be used by reading applications to implement skippability (based on us
 
 ```json
 {
-  "textref": "chapter1.mp3",
+  "audioref": "chapter1.mp3",
   "role": ["chapter"],
   "children": [
     {
@@ -161,7 +180,7 @@ Roles can be used by reading applications to implement skippability (based on us
 
 ```json
 {
-  "textref": "chapter1.mp3",
+  "audioref": "chapter1.mp3",
   "role": ["chapter"],
   "children": [
     {
