@@ -7,15 +7,22 @@
 | `aside` | [`aside`](https://www.w3.org/TR/epub-ssv-11/#sec-asides) | | `<aside>` | Secondary or supplementary content. |
 | `blockquote` | | | `<blockquote>` | Represents a section that is quoted from another source. |
 | `caption` | | | `<caption>` or `<figcaption>` | A caption for an image or a table. |
+| `cell` | [`table-cell`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) |  `cell` | `<td>` | A single cell of tabular data or content. |
+| `complementary` | | `complementary` | | A supporting section of the document, designed to be complementary to the main content at a similar level in the DOM hierarchy, but remains meaningful when separated from the main content. |
+| `definition` | | `definition` | `<dd>` | A definition of a term or concept. |
 | `figure` | [`figure`](https://www.w3.org/TR/epub-ssv-11/#sec-figures) | `figure` | `<figure>` | An illustration, diagram, photo, code listing or similar, referenced from the text of a work, and typically annotated with a title, caption and/or credits. |
+| `heading` | | `heading` | `<h1>` through `<h6>` | A heading for a section of the page. |
 | `image` | | `img` | `<img>` | Represents an image. |
 | `list` | [`list`](https://www.w3.org/TR/epub-ssv-11/#sec-lists) | `list` | `<ul>` or `<ol>` | A structure that contains an enumeration of related content items. |
 | `listItem` | [`list-item`](https://www.w3.org/TR/epub-ssv-11/#sec-lists)  | `listitem`| `<li>` |  A single item in an enumeration. |
-| `navigation` | | | `<nav>` | Represents a section of a page that links to other pages or to parts within the page: a section with navigation links. |
+| `main` | | `main` | | Content that is directly related to or expands upon the central topic of the document. |
+| `math` | | `math` | `<math>` | Content that represents a mathematical expression. |
+| `navigation` | | `navigation` | `<nav>` | Represents a section of a page that links to other pages or to parts within the page: a section with navigation links. |
+| `region` | | `region` | | content that is relevant to a specific, author-specified purpose and sufficiently important that users will likely want to be able to navigate to the section easily and to have it listed in a summary of the page. |
+| `row` | [`table-row`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | `row` | `<tr>` | A row of data or content in a tabular structure. |
 | `section` | | | `<section>` | Represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. |
 | `table` | [`table`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | `table` | `<table>` | A structure containing data or content laid out in tabular form. |
-| `cell` | [`table-cell`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) |  `cell` | `<td>` | A single cell of tabular data or content. |
-| `row` | [`table-row`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | `row` | `<tr>` | A row of data or content in a tabular structure. |
+| `term` | | `term` | `<dfn>` or `<dt>` | A word or phrase with a corresponding definition.|
 
 ## Inherited from DPUB ARIA 1.0
 
