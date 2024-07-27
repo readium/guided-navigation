@@ -142,16 +142,20 @@ Roles can be used by reading applications to implement skippability (based on us
 
 ```json
 {
-  "textref": "chapter1.html",
-  "role": ["chapter"],
-  "children": [
+  "guided": [
     {
-      "textref": "chapter1.html#par1", 
-      "audioref": "chapter1.mp3#t=0,20"
-    },
-    {
-      "textref": "chapter1.html#par2", 
-      "audioref": "chapter1.mp3#t=20,28"
+      "textref": "chapter1.html#start",
+      "role": ["chapter"],
+      "children": [
+        {
+          "textref": "chapter1.html#par1", 
+          "audioref": "chapter1.mp3#t=0,20"
+        },
+        {
+          "textref": "chapter1.html#par2", 
+          "audioref": "chapter1.mp3#t=20,28"
+        }
+      ]
     }
   ]
 }
@@ -161,9 +165,7 @@ Roles can be used by reading applications to implement skippability (based on us
 
 ```json
 {
-  "audioref": "chapter1.mp3",
-  "role": ["chapter"],
-  "children": [
+  "guided": [
     {
       "audioref": "chapter1.mp3#t=0,20",
       "textref": "chapter1.html#par1"
@@ -180,51 +182,58 @@ Roles can be used by reading applications to implement skippability (based on us
 
 ```json
 {
-  "audioref": "chapter1.mp3",
-  "role": ["chapter"],
-  "children": [
+  "guided": [
     {
       "audioref": "chapter1.mp3#t=0,7",
       "text": "This is the first sentence in this audiobook."
     },
     { 
-      "audioref": "chapter1.mp3#t=8,16",
+      "audioref": "chapter1.mp3#t=7,16",
       "text": "Which is followed by a second, slightly longer sentence."
     }
   ]
 }
 ```
 
-*Example 4: Guided navigation in a manga*
+*Example 4: Panel by panel navigation in a manga*
 
 ```json
 {
-  "role": ["page"],
-  "imgref": "page10.jpg",
-  "children": [
+  "guided": [
     {
-      "role": ["panel"],
-      "imgref": "page10.jpg#xywh=percent:10,10,60,40"
-    },
-    {
-      "role": ["panel"],
-      "imgref": "page10.jpg#xywh=percent:70,50,30,50"
+      "role": ["page"],
+      "imgref": "page10.jpg",
+      "children": [
+        {
+          "role": ["panel"],
+          "imgref": "page10.jpg#xywh=percent:10,10,60,40"
+        },
+        {
+          "role": ["panel"],
+          "imgref": "page10.jpg#xywh=percent:70,50,30,50"
+        }
+      ]
     }
   ]
 }
 ```
 
-*Example 5: Text equivalent of a speech bubble in a comic book*
+*Example 5: Accessible comic with a description and textual equivalent of a bubble*
 
 ```json
 {
-  "role": ["panel"],
-  "imgref": "page10.jpg#xywh=percent:10,10,60,40",
-  "children": [
+  "guided": [
     {
-      "role": ["balloon"],
-      "imgref": "page10.jpg#xywh=percent:10,10,20,20",
-      "text": "This is a dialogue in a speech bubble."
+      "role": ["panel"],
+      "imgref": "page10.jpg#xywh=percent:10,10,60,40",
+      "description": "This is a description of the content of the panel",
+      "children": [
+        {
+          "role": ["speechBubble"],
+          "imgref": "page10.jpg#xywh=percent:10,10,20,20",
+          "text": "This is a dialogue in a speech bubble."
+        }
+      ]
     }
   ]
 }
