@@ -78,7 +78,7 @@ A publication <strong class="rfc">must</strong> include a [`duration`](https://r
 ```json
 "links": [
   {
-    "rel": "alternate",
+    "rel": "related",
     "href": "guided.json",
     "type": "application/guided-navigation+json"
   }
