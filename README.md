@@ -17,7 +17,7 @@ This document defines a syntax for Guided Navigation Documents, serialized in JS
 
 * Synchronizing text with pre-recorded audio, for example in order to support [Media Overlays in EPUB](https://www.w3.org/TR/epub/#sec-media-overlays) or to distribute accessible audiobooks.
 * Panel by panel navigation in comics/manga to facilitate reading on smaller screens.
-* Providing a textual transcript and/or image descriptions for high illustrated publications such as [Divina](https://readium.org/webpub-manifest/profiles/divina).
+* Providing a textual transcript and/or image descriptions for highly illustrated publications such as [Divina](https://readium.org/webpub-manifest/profiles/divina).
 
 
 ## 1. Guided Navigation Documents
@@ -252,7 +252,7 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 
 ## Appendix C - TODO
 
-### Potential format for `spread`
+### Potential format for `multipleImages`
 
 > References:
 >  
@@ -261,21 +261,21 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 
 | Name | Description | Format |
 | ---- | ----------- | ------ |
-| `spread` | Two or more references to images or regions of different images. | URI |
+| `multipleImages` | Two or more references to images or regions of different images. | Array of URI |
 
-*Example: Two pages spread that contains a panel across the entire spread*
+*Example: Two page spread that contains a panel across the entire spread*
 
 ```json
 {
   "role": ["spread"],
-  "spread": [
+  "multipleImages": [
     "page2.jpg", 
     "page3.jpg"
   ]
   "children": [
     {
       "role": ["panel"]
-      "spread": [
+      "multipleImages": [
         "page2.jpg#xywh=percent:0,0,100,20",
         "page3.jpg#xywh=percent:0,0,100,20"
       ]
@@ -302,7 +302,7 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
   },
   "children": [
     {
-      "role": ["balloon"],
+      "role": ["speechBubble"],
       "imgref": "page10.jpg#xywh=percent:10,10,20,20",
       "text": "This is a dialogue in a speech bubble."
     }
@@ -311,6 +311,13 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 ```
 
 ### Potential object representation for `text`
+
+| Name | Description | Format |
+| ---- | ----------- | ------ |
+| `language` | Main language for the text, which can be locally overriden in the SSML representation. | BCP-47 language tag |
+| `plain` | Contains a plain text representation of the text. | String |
+| `plain` | Contains an SSML representation of the text. | SSML |
+
 
 *Example: Text representation with both plain text and SSML*
 
