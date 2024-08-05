@@ -1,8 +1,8 @@
 # Readium Guided Navigation
 
-Guided navigation offers an alternative reading experience through a sequence of media fragments, meant to be presented in parallel.
+Guided navigation offers an alternative reading experience through a sequence of media fragments. In some cases, multiple media fragments are meant to be presented in parallel.
 
-This document defines a syntax for Guided Navigation Documents, serialized in JSON and meant to be references in a [Readium Web Publication Manifest](https://readium.org/webpub-manifest).
+This document defines a syntax for Guided Navigation Documents, serialized in JSON and meant to be referenced in a [Readium Web Publication Manifest](https://readium.org/webpub-manifest).
 
 **Editors:**
 
@@ -16,6 +16,7 @@ This document defines a syntax for Guided Navigation Documents, serialized in JS
 ## Use cases
 
 * Synchronizing text with pre-recorded audio, for example in order to support [Media Overlays in EPUB](https://www.w3.org/TR/epub/#sec-media-overlays) or to distribute accessible audiobooks.
+* Extracting a Guided Navigation Document from an HTML/XHTML resource for a read aloud feature or a reader mode.
 * Panel by panel navigation in comics/manga to facilitate reading on smaller screens.
 * Providing a textual transcript and/or image descriptions for highly illustrated publications such as [Divina](https://readium.org/webpub-manifest/profiles/divina).
 
@@ -31,7 +32,7 @@ Guided Navigation Documents <strong class="rfc">must</strong> be identified usin
 | `links` | References to other resources that are related to the current Guided Navigation Document. | An array of [Link Objects](https://readium.org/webpub-manifest/#24-the-link-object) | No |
 | `guided` | A sequence of resources and/or media fragments into these resources, meant to be presented sequentially to the user. | An array of [Guided Navigation Objects](#12-guided-navigation-object) | Yes |
 
-*Example:*
+*Example 1: A link to a subsequent Guided Navigation Document*
 
 ```json
 {
@@ -67,25 +68,56 @@ Each Guided Navigation Object <strong class="rfc">must</strong> either contain:
 - a `children` object containg at least one Guided Navigation Object
 - or one of the following elements: `audioref`, `imgref` or `textref`
 
-## 2. Guided navigation in a publication
+## 2. Relationship to the Readium Web Publication Manifest
+
+Guided Navigation Documents are primarily designed to be referenced from a [Readium Web Publication Manifest](https://readium.org/webpub-manifest), in order to enable use cases that such manifests cannot handle on their own.
+
+For example, a publication using the [EPUB profile](https://readium.org/webpub-manifest/profiles/epub) could handle [Media Overlays](https://www.w3.org/TR/epub-33/#sec-media-overlays) by parsing [SMIL files](https://www.w3.org/TR/SMIL3/) contained in the EPUB package and exposing them as Guided Navigation Documents.
 
 ### 2.1. Metadata requirements
 
-A publication <strong class="rfc">must</strong> include a [`duration`](https://readium.org/webpub-manifest/contexts/default/#duration-and-number-of-pages) if it references a Guided Navigation Document using audio.
+If a publication references any Guided Navigation Document using `audioref`:
 
-### 2.2. Publication-level
+- it <strong class="rfc">must</strong> include a [`duration`](https://readium.org/webpub-manifest/contexts/default/#duration-and-number-of-pages) with the total duration for all audio resources referenced
+- and it <strong class="rfc">should</strong> include one or more `narrator` 
+
+### 2.2. Discovering a Guided Navigation Document
+
+Users <strong class="rfc">must</strong> be free to move in and out of a Guided Navigation experience at will. 
+
+To do so, publications <strong class="rfc">should</strong> provide references to Guided Navigation Documents both at a publication-level and as an alternate to resources referenced in the `readingOrder`.
+
+#### 2.2.1 Publication-level
+
+All valid [Readium Web Publication Manifests](https://readium.org/webpub-manifest) <strong class="rfc">must</strong> contain a `links` property with at least one reference to its canonical location.
+
+In order to indicate the presence of a Guided Navigation Document, `links` <strong class="rfc">may</strong> also include an additional Link Object where:
+
+- `type` uses the dedicated value for Guided Navigation Documents: `application/guided-navigation+json`
+- and the `rel` value simply indicates that the Guided Navigation Document is `related` to the publication
+
+Subsequent Guided Navigation Documents can be linked from this initial resource using the `links` property, in order to navigate throughout the publication.
+
+*Example 2: A publication links to a Guided Navigation Document*
 
 ```json
 "links": [
   {
+    "rel": "self",
+    "href": "https://example.com/manifest.json",
+    "type": "application/guided-navigation+json"
+  }
+  {
     "rel": "related",
-    "href": "guided.json",
+    "href": "https://example.com/guided.json",
     "type": "application/guided-navigation+json"
   }
 ]
 ```
 
-### 2.3. Link-level
+#### 2.2.2 Link-level
+
+In addition to a publication-level link, all resources in the `readingOrder` <strong class="rfc">should</strong> also point to the Guided Navigation Document that references them using the `alternate` property.
 
 ```json
 "readingOrder": [
@@ -136,7 +168,19 @@ The full list of supported roles is available at: <https://readium.org/guided-na
 
 Roles can be used by reading applications to implement skippability (based on user preferences, some items could be skipped) and escapability (allowing users to escape from the current context, for example escaping from the content of a table to go back to the main text).
 
-## Appendix A - Examples
+## Appendix A - JSON Schema
+
+The following JSON Schemas are available under version control: 
+
+- Guided Navigation Document: <https://github.com/readium/guided-navigation/blob/master/schema/document.schema.json>
+- Guided Navigation Object: <https://github.com/readium/guided-navigation/blob/master/schema/object.schema.json>
+
+For the purpose of validating a Readium Guided Navigation Document, use the following JSON Schema resource: 
+
+- <https://readium.org/guided-navigation/schema/document.schema.json>
+
+
+## Appendix B - Examples
 
 *Example 1: Synchronizing text with pre-recorded audio*
 
@@ -161,7 +205,7 @@ Roles can be used by reading applications to implement skippability (based on us
 }
 ```
 
-*Example 2: Synchronizing an audiobook with text using references*
+*Example 2: Accessible audiobook using text references*
 
 ```json
 {
@@ -178,7 +222,7 @@ Roles can be used by reading applications to implement skippability (based on us
 }
 ```
 
-*Example 3: Synchronizing an audiobook with text using embedded text*
+*Example 3: Accessible audiobook using embedded text*
 
 ```json
 {
@@ -201,18 +245,12 @@ Roles can be used by reading applications to implement skippability (based on us
 {
   "guided": [
     {
-      "role": ["page"],
-      "imgref": "page10.jpg",
-      "children": [
-        {
-          "role": ["panel"],
-          "imgref": "page10.jpg#xywh=percent:10,10,60,40"
-        },
-        {
-          "role": ["panel"],
-          "imgref": "page10.jpg#xywh=percent:70,50,30,50"
-        }
-      ]
+      "role": ["panel"],
+      "imgref": "page10.jpg#xywh=percent:10,10,60,40"
+    },
+    {
+      "role": ["panel"],
+      "imgref": "page10.jpg#xywh=percent:70,50,30,50"
     }
   ]
 }
@@ -224,14 +262,46 @@ Roles can be used by reading applications to implement skippability (based on us
 {
   "guided": [
     {
-      "role": ["panel"],
-      "imgref": "page10.jpg#xywh=percent:10,10,60,40",
-      "description": "This is a description of the content of the panel",
+      "role": ["page"],
+      "imgref": "page10.jpg",
       "children": [
         {
-          "role": ["speechBubble"],
-          "imgref": "page10.jpg#xywh=percent:10,10,20,20",
-          "text": "This is a dialogue in a speech bubble."
+          "role": ["panel"],
+          "imgref": "page10.jpg#xywh=percent:10,10,60,40",
+          "description": "Emily marche seule, elle semble perdue dans ses pensées. Derrière elle, deux policiers la suivent du regard et échangent à son propos.",
+          "character": ["Emily", "Premier policier", "Deuxième policier"],
+          "children": [
+            {
+              "imgref": "page10.jpg#xywh=percent:10,10,30,20",
+              "character": ["Emily"],
+              "children": [
+                {
+                  "role": ["thoughtBubble"],
+                  "text": "Quel étrange sentiment."
+                },
+                {
+                  "role": ["thoughtBubble"],
+                  "text": "J'accède enfin à ce poste tant convoité, et pourtant…"
+                }
+              ]
+            },
+            {
+              "imgref": "page10.jpg#xywh=percent:40,10,20,20",
+              "character": ["Premier policier", "Deuxième policier"],
+              "children": [
+                {
+                  "role": ["speechBubble"],
+                  "text": "Hé, c'est pas elle, la fille qui a arrêté le type de l'autre soir, celui qu'on a envoyé à Wormwood ?",
+                  "character": ["Premier policier"]
+                },
+                {
+                  "role": ["speechBubble"],
+                  "text": "Ouais ! Il paraît qu'Hawkins y serait passé si elle n'avait pas été là.",
+                  "character": ["Deuxième policier"]
+                }
+              ]
+            }
+          ]
         }
       ]
     }
@@ -239,18 +309,55 @@ Roles can be used by reading applications to implement skippability (based on us
 }
 ```
 
-## Appendix B - JSON Schema
+## Appendix C - Potential additions
 
-The following JSON Schemas are available under version control: 
+### Potential object representation for `text`
 
-- Guided Navigation Document: <https://github.com/readium/guided-navigation/blob/master/schema/document.schema.json>
-- Guided Navigation Object: <https://github.com/readium/guided-navigation/blob/master/schema/object.schema.json>
+| Name | Description | Format |
+| ---- | ----------- | ------ |
+| `language` | Main language for the text, which can be locally overriden in the SSML representation. | BCP-47 language tag |
+| `plain` | Contains a plain text representation of the text. | String |
+| `ssml` | Contains an SSML representation of the text. | SSML |
 
-For the purpose of validating a Readium Guided Navigation Document, use the following JSON Schema resource: 
 
-- <https://readium.org/guided-navigation/schema/document.schema.json>
+*Example: Text representation with both plain text and SSML*
 
-## Appendix C - TODO
+```json
+{
+    "imgref": "page10.jpg#xywh=percent:10,10,20,20",
+    "text": {
+      "plain": "The SSML standard is defined by the W3C.",
+      "language": "en",
+      "ssml": "<speak>The <say-as interpret-as=\"characters\">SSML</say-as>standard <break time=\"1s\"/>is defined by the<sub alias=\"World Wide Web Consortium\">W3C</sub>.</speak>"
+    }
+}
+```
+
+### Potential format for `description`
+
+| Name | Description | Format |
+| ---- | ----------- | ------ |
+| `description` | Text, audio or image description for the current Guided Navigation Object. | Guided Navigation Object without `children` |
+
+*Example: Audio and text description for an image*
+
+```json
+{
+  "role": ["panel"],
+  "imgref": "page10.jpg#xywh=percent:10,10,60,40",
+  "description": {
+    "text": "A cowboy is looking at the city as the sun sets into the horizon.",
+    "audioref": "description.mp3t=0,5"
+  },
+  "children": [
+    {
+      "role": ["speechBubble"],
+      "imgref": "page10.jpg#xywh=percent:10,10,20,20",
+      "text": "This is a dialogue in a speech bubble."
+    }
+  ]
+}
+```
 
 ### Potential format for `multipleImages`
 
@@ -284,50 +391,20 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 }
 ```
 
-### Potential format for `description`
+### Potential format for `character`
+
 
 | Name | Description | Format |
 | ---- | ----------- | ------ |
-| `description` | Text, audio or image description for the current Guided Navigation Object. | Guided Navigation Object without `children` |
+| `character` | Identifies one or more character present in a given Guided Navigation object. | Array of strings |
 
-*Example: Audio and text description for an image*
+*Example: Characters present in the panel of a comicbook*
 
 ```json
 {
   "role": ["panel"],
   "imgref": "page10.jpg#xywh=percent:10,10,60,40",
-  "description": {
-    "text": "A cowboy is looking at the city as the sun sets into the horizon.",
-    "audioref": "description.mp3t=0,5"
-  },
-  "children": [
-    {
-      "role": ["speechBubble"],
-      "imgref": "page10.jpg#xywh=percent:10,10,20,20",
-      "text": "This is a dialogue in a speech bubble."
-    }
-  ]
-}
-```
-
-### Potential object representation for `text`
-
-| Name | Description | Format |
-| ---- | ----------- | ------ |
-| `language` | Main language for the text, which can be locally overriden in the SSML representation. | BCP-47 language tag |
-| `plain` | Contains a plain text representation of the text. | String |
-| `plain` | Contains an SSML representation of the text. | SSML |
-
-
-*Example: Text representation with both plain text and SSML*
-
-```json
-{
-    "imgref": "page10.jpg#xywh=percent:10,10,20,20",
-    "text": {
-      "plain": "The SSML standard is defined by the W3C.",
-      "language": "en",
-      "ssml": "<speak>The <say-as interpret-as=\"characters\">SSML</say-as>standard <break time=\"1s\"/>is defined by the<sub alias=\"World Wide Web Consortium\">W3C</sub>.</speak>"
-    }
-}
+  "description": "Emily marche seule, elle semble perdue dans ses pensées. Derrière elle, deux policiers la suivent du regard et échangent à son propos.",
+  "character": ["Emily", "Premier policier", "Deuxième policier"]
+}  
 ```
