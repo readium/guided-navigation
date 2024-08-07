@@ -20,7 +20,6 @@ This document defines a syntax for Guided Navigation Documents, serialized in JS
 * Panel by panel navigation in comics/manga to facilitate reading on smaller screens.
 * Providing a textual transcript and/or image descriptions for highly illustrated publications such as [Divina](https://readium.org/webpub-manifest/profiles/divina).
 
-
 ## 1. Guided Navigation Documents
 
 Guided Navigation Documents <strong class="rfc">must</strong> be identified using the following media type: `application/guided-navigation+json`.
@@ -79,7 +78,9 @@ For example, a publication using the [EPUB profile](https://readium.org/webpub-m
 If a publication references any Guided Navigation Document using `audioref`:
 
 - it <strong class="rfc">must</strong> include a [`duration`](https://readium.org/webpub-manifest/contexts/default/#duration-and-number-of-pages) with the total duration for all audio resources referenced
-- and it <strong class="rfc">should</strong> include one or more `narrator` 
+- and it <strong class="rfc">should</strong> include one or more `narrator`
+
+Publications that conform to the [EPUB profile](https://readium.org/webpub-manifest/profiles/epub) and map [SMIL](https://www.w3.org/TR/SMIL3/) to Guided Navigations Documents, <strong class="rfc">may</strong> also include a [`mediaOverlay`](https://readium.org/webpub-manifest/profiles/epub#mediaoverlay) property.
 
 ### 2.2. Discovering a Guided Navigation Document
 
@@ -118,6 +119,10 @@ Subsequent Guided Navigation Documents can be linked from this initial resource 
 #### 2.2.2 Link-level
 
 In addition to a publication-level link, all resources in the `readingOrder` <strong class="rfc">should</strong> also point to the Guided Navigation Document that references them using the `alternate` property.
+
+If this Guided Navigation Document contains any `audioref` element, then the Link Object <strong class="rfc">should</strong> also indicate the total duration for all `audioref` properties using `duration`.
+
+*Example 3: An image in a Divina that links to a Guided Navigation Document as an alternative*
 
 ```json
 "readingOrder": [
@@ -166,7 +171,7 @@ Roles are inherited from multiple specifications such as [HTML](https://html.spe
 
 The full list of supported roles is available at: <https://readium.org/guided-navigation/roles>
 
-Roles can be used by reading applications to implement skippability (based on user preferences, some items could be skipped) and escapability (allowing users to escape from the current context, for example escaping from the content of a table to go back to the main text).
+Roles <strong class="rfc">should</strong> be used by reading applications to implement skippability (based on user preferences, some items could be skipped) and escapability (allowing users to escape from the current context, for example escaping from the content of a table to go back to the main text).
 
 ## Appendix A - JSON Schema
 
@@ -182,7 +187,7 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 
 ## Appendix B - Examples
 
-*Example 1: Synchronizing text with pre-recorded audio*
+*Example 4: Synchronizing text with pre-recorded audio*
 
 ```json
 {
@@ -205,7 +210,7 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 }
 ```
 
-*Example 2: Accessible audiobook using text references*
+*Example 5: Accessible audiobook using text references*
 
 ```json
 {
@@ -222,7 +227,7 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 }
 ```
 
-*Example 3: Accessible audiobook using embedded text*
+*Example 6: Accessible audiobook using embedded text*
 
 ```json
 {
@@ -239,7 +244,7 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 }
 ```
 
-*Example 4: Panel by panel navigation in a manga*
+*Example 7: Panel by panel navigation in a manga*
 
 ```json
 {
@@ -256,7 +261,7 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 }
 ```
 
-*Example 5: Accessible comic with a description and textual equivalent of a bubble*
+*Example 8: Accessible comic with a description and textual equivalent of a bubble*
 
 ```json
 {
@@ -320,7 +325,7 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 | `ssml` | Contains an SSML representation of the text. | SSML |
 
 
-*Example: Text representation with both plain text and SSML*
+*Example 9: Text representation with both plain text and SSML*
 
 ```json
 {
@@ -339,7 +344,7 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 | ---- | ----------- | ------ |
 | `description` | Text, audio or image description for the current Guided Navigation Object. | Guided Navigation Object without `children` |
 
-*Example: Audio and text description for an image*
+*Example 10: Audio and text description for an image*
 
 ```json
 {
@@ -361,6 +366,10 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 
 ### Potential format for `multipleImages`
 
+> This is under discussion at:
+> 
+> - How should we handle references to multiple images? <https://github.com/readium/guided-navigation/discussions/9>
+> 
 > References:
 >  
 > * [EPUB Region-Based Navigation 1.0](https://idpf.org/epub/renditions/region-nav/#sec-3.5.2)
@@ -370,7 +379,7 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 | ---- | ----------- | ------ |
 | `multipleImages` | Two or more references to images or regions of different images. | Array of URI |
 
-*Example: Two page spread that contains a panel across the entire spread*
+*Example 11: Two page spread that contains a panel across the entire spread*
 
 ```json
 {
@@ -398,7 +407,7 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 | ---- | ----------- | ------ |
 | `character` | Identifies one or more character present in a given Guided Navigation object. | Array of strings |
 
-*Example: Characters present in the panel of a comicbook*
+*Example 12: Characters present in the panel of a comicbook*
 
 ```json
 {
