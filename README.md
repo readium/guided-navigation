@@ -52,6 +52,13 @@ Guided Navigation Documents <strong class="rfc">must</strong> be identified usin
 
 ### 1.2. Guided Navigation Object
 
+Each Guided Navigation Object <strong class="rfc">must</strong> either contain:
+
+- a `children` object containg at least one Guided Navigation Object
+- or one or more of the following properties: `audioref`, `imgref` or `textref`
+
+Guided Navigations Objects <strong class="rfc">should</strong> include one or more values for `role`.
+
 
 | Name | Description | Format |
 | ---- | ----------- | ------ |
@@ -62,10 +69,6 @@ Guided Navigation Documents <strong class="rfc">must</strong> be identified usin
 | `text`  | Textual equivalent of the resources or fragment of the resources referenced by the current Guided Navigation Object. | String |
 | `textref`  | References a textual resource or a fragment of it. | URI |
 
-Each Guided Navigation Object <strong class="rfc">must</strong> either contain:
-
-- a `children` object containg at least one Guided Navigation Object
-- or one of the following elements: `audioref`, `imgref` or `textref`
 
 ## 2. Relationship to the Readium Web Publication Manifest
 
@@ -143,13 +146,17 @@ If this Guided Navigation Document contains any `audioref` element, then the Lin
 
 > The following media fragments have been identified as potential candidates for fragments in `audioref`, `imgref` and `textref`:
 > 
->- Audio: <https://www.w3.org/TR/media-frags/#naming-time>
->- Images:
+>**Audio**: <https://www.w3.org/TR/media-frags/#naming-time>
+>
+>**Images:**
+>
 >  - Rectangular regions: <https://www.w3.org/TR/media-frags/#naming-space>
 >  - Polygonal regions: <https://idpf.org/epub/renditions/region-nav/#sec-3.5.1>
->- Text:
->  - Fragment ID: `#identifier` 
->  - Text fragments: <https://wicg.github.io/scroll-to-text-fragment/>
+>
+>**Text:**
+>  
+> - Fragment ID: `#identifier` 
+> - Text fragments: <https://wicg.github.io/scroll-to-text-fragment/>
 > 
 > There are a number of open issues that relate to media fragments:
 > 
@@ -163,9 +170,6 @@ If this Guided Navigation Document contains any `audioref` element, then the Lin
 > - Cherrypicking roles from EPUB 3 Structural Semantics Vocabulary 1.1: <https://github.com/readium/guided-navigation/discussions/2>
 > - Identifying skippable and escapable roles: <https://github.com/readium/guided-navigation/discussions/3>
 > - Defining a list of roles for Divina: <https://github.com/readium/guided-navigation/discussions/1>
-
-
-Each Guided Navigation Object <strong class="rfc">should</strong> document one or more role using the `role` property.
 
 Roles are inherited from multiple specifications such as [HTML](https://html.spec.whatwg.org/), [ARIA](https://www.w3.org/TR/wai-aria-1.1/), [DPUB ARIA](https://www.w3.org/TR/dpub-aria-1.1/) and [EPUB 3 Semantics Vocabulary](https://www.w3.org/TR/epub-ssv-11/), in order to convey the structural semantics of a publication.
 

@@ -1,0 +1,182 @@
+{
+  "guided": [
+    {
+      "imgref": "page1.jpg#xywh=76,19,814,635",
+      "role": ["panel"],
+      "character": ["Pepper", "Carrot", "Witch 1", "Witch 2", "Witch 3"]
+    },
+    {
+      "imgref": "page1.jpg#xywh=42,694,296,297",
+      "role": ["panel"],
+      "character": ["Witch 2"],
+      "children": [
+        {
+          "role": ["speechBubble"],
+          "text": "But Pepper… Come back…"
+        }
+      ]
+    },
+    {
+      "imgref": "page1.jpg#xywh=356,695,584,296",
+      "role": ["panel"],
+      "character": ["Pepper"],
+      "children": [
+        {
+          "role": ["shoutBubble"],
+          "text": "No! I'm leaving!!"
+        },
+        {
+          "role": ["speechBubble"],
+          "text": "You don't teach real witchcraft! I'm going - to the witches of Ah!"
+        }
+      ]
+    },
+    {
+      "imgref": "page1.jpg#xywh=43,1022,907,308",
+      "role": ["panel"],
+      "character": ["Pepper", "Carrot"]
+    },
+    {
+      "imgref": "page2.jpg.#xywh=58,16,878,305",
+      "role": ["panel"],
+      "character": ["Witch 1", "Witch 2", "Witch 3"]
+    },
+    {
+      "imgref": "page2.jpg.#xywh=43,355,906,347",
+      "role": ["panel"],
+      "character": ["Pepper", "Carrot"],
+      "children": [
+        {
+          "imgref": "page2.jpg#xywh=43,355,570,347",
+          "role": ["speechBubble"],
+          "character": ["Pepper"],
+          "text": "Alright then, off to the land of the setting moons. Shichimi can tell us how to join the witched of Ah."
+        },
+        {
+          "imgref": "page2.jpg#xywh=340,355,600,347",
+          "role": ["speechBubble"],
+          "character": ["Pepper"],
+          "text": "Carrot, get out the map and compass: it's too cloudy to see where I'm going"
+        }
+      ]
+    },
+    {
+      "imgref": "page2.jpg#xywh=44,736,294,594",
+      "role": ["panel"],
+      "character": ["Carrot"]
+    },
+    {
+      "imgref": "page2.jpg#xywh=356,733,280,594",
+      "role": ["panel"],
+      "character": ["Pepper", "Carrot"],
+      "children": [
+        {
+          "role": ["shoutBubble"],
+          "character": ["Pepper"],
+          "text": "Drats! Turbulence! Hold on!"
+        }
+      ]
+    },
+    {
+      "imgref": "page2.jpg#xywh=655,736,294,594",
+      "role": ["panel"],
+      "character": ["Pepper", "Carrot"],
+      "children": [
+        {
+          "role": ["shoutBubble"],
+          "character": ["Pepper"],
+          "text": "Oh no!!!"
+        }
+      ]
+    },
+    {
+      "imgref": "page3.jpg#xywh=46,16,904,266",
+      "role": ["panel"]
+    },
+    {
+      "imgref": "page3.jpg#xywh=46,315,904,224",
+      "role": ["panel"]
+    },
+    {
+      "imgref": "page3.jpg#xywh=46,572,904,226",
+      "role": ["panel"]
+    },
+    {
+      "imgref": "page3.jpg#xywh=46,830,904,500",
+      "role": ["panel"]
+    },
+    {
+      "imgref": "page4.jpg#xywh=42,16,444,322",
+      "role": ["panel"]
+    },
+    {
+      "imgref": "page4.jpg#xywh=505,16,444,322",
+      "role": ["panel"]
+    },
+    {
+      "imgref": "page4.jpg#xywh=44,370,890,388",
+      "role": ["panel"]
+    },
+    {
+      "imgref": "page4.jpg#xywh=44,790,900,540",
+      "role": ["panel"],
+      "children": [
+        {
+          "imgref": "page4.jpg#xywh=246,794,512,348",
+          "role": ["speechBubble"]
+        },
+        {
+          "imgref": "page4.jpg#xywh=546,874,400,414",
+          "role": ["speechBubble"]
+        }
+      ]
+    },
+    {
+      "imgref": "page5.jpg#xywh=42,14,908,290",
+      "role": ["panel"]
+    },
+    {
+      "imgref": "page5.jpg#xywh=45,336,455,510",
+      "role": ["panel"]
+    },
+    {
+      "imgref": "page5.jpg#xywh=520,336,430,510",
+      "role": ["panel"]
+    },
+    {
+      "imgref": "page5.jpg#xywh=164,916,706,414",
+      "role": ["panel"]
+    },
+    {
+      "imgref": "page6.jpg#xywh=84,30,840,402",
+      "role": ["panel"]
+    },
+    {
+      "imgref": "page6.jpg#xywh=44,490,228,392",
+      "role": ["panel"]
+    },
+    {
+      "imgref": "page6.jpg#xywh=294,490,642,392",
+      "role": ["panel"]
+    },
+    {
+      "imgref": "page6.jpg#xywh=44,912,400,416"
+    },
+    {
+      "imgref": "page6.jpg#xywh=44,912,906,416",
+      "role": ["panel"]
+    },
+    {
+      "imgref": "page7.jpg#xywh=40,15,914,422",
+      "role": ["panel"]
+    },
+    {
+      "imgref": "page7.jpg#xywh=256,450,540,210",
+      "role": ["panel"]
+    },
+    {
+      "imgref": "page7.jpg#xywh=42,692,886,638",
+      "role": ["panel"]
+    }
+  ]
+}
