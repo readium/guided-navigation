@@ -3,12 +3,14 @@
     {
       "imgref": "page1.jpg#xywh=76,19,814,635",
       "role": ["panel"],
-      "character": ["Pepper", "Carrot", "Cayenne", "Cumin", "Thyme"]
+      "character": ["Pepper", "Carrot", "Cayenne", "Cumin", "Thyme"],
+      "description": "Pepper walks away from the house of the witches of Chaosah with a heavy backpack on her shoulders and Carrot attached to her leg. In the background, the three witches are standing on the front porch, looking sadly at Pepper."
     },
     {
       "imgref": "page1.jpg#xywh=42,694,296,297",
       "role": ["panel"],
       "character": ["Cumin"],
+      "description": "Cumin looks sadder than the rest of the witches and shakily addresses Pepper.",
       "children": [
         {
           "role": ["speechBubble"],
@@ -20,6 +22,7 @@
       "imgref": "page1.jpg#xywh=356,695,584,296",
       "role": ["panel"],
       "character": ["Pepper"],
+      "description": "Pepper frowns and looks angrily over her shoulder.",
       "children": [
         {
           "role": ["shoutBubble"],
@@ -35,6 +38,7 @@
       "imgref": "page1.jpg#xywh=43,1022,907,308",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
+      "description": "Pepper and Carrot fly away from the house on Pepper's broom, making a woosh sound as it reaches dark clouds in the sky.",
       "children": [
         {
           "role": ["sound"],
