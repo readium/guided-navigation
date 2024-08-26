@@ -34,7 +34,13 @@
     {
       "imgref": "page1.jpg#xywh=43,1022,907,308",
       "role": ["panel"],
-      "character": ["Pepper", "Carrot"]
+      "character": ["Pepper", "Carrot"],
+      "children": [
+        {
+          "role": ["sound"],
+          "text": "Woosh !"
+        }
+      ]
     },
     {
       "imgref": "page2.jpg.#xywh=58,16,878,305",
@@ -83,6 +89,10 @@
       "character": ["Pepper", "Carrot"],
       "children": [
         {
+          "role": ["sound"],
+          "text": "BrrOoooOoo!!"
+        },
+        {
           "role": ["shoutBubble"],
           "character": ["Pepper"],
           "text": "Oh no!!!"
@@ -91,43 +101,79 @@
     },
     {
       "imgref": "page3.jpg#xywh=46,16,904,266",
-      "role": ["panel"]
+      "role": ["panel"],
+      "children": [
+        {
+          "role": ["sound"],
+          "text": "CrrAsh!!"
+        }
+      ]
     },
     {
       "imgref": "page3.jpg#xywh=46,315,904,224",
-      "role": ["panel"]
+      "role": ["panel"],
+      "character": ["Pepper", "Carrot"]
     },
     {
       "imgref": "page3.jpg#xywh=46,572,904,226",
-      "role": ["panel"]
+      "role": ["panel"],
+      "character": ["Pepper", "Carrot"]
     },
     {
       "imgref": "page3.jpg#xywh=46,830,904,500",
-      "role": ["panel"]
+      "role": ["panel"],
+      "character": ["Pepper", "Carrot", "Monster"]
     },
     {
       "imgref": "page4.jpg#xywh=42,16,444,322",
-      "role": ["panel"]
+      "role": ["panel"],
+      "character": ["Pepper", "Monster"],
+      "children": [
+        {
+          "role": ["speechBubble"],
+          "character": ["Pepper"],
+          "text": "Above all, don't panic, Carrot…"
+        }
+      ]
     },
     {
       "imgref": "page4.jpg#xywh=505,16,444,322",
-      "role": ["panel"]
+      "role": ["panel"],
+      "character": ["Monster"]
     },
     {
       "imgref": "page4.jpg#xywh=44,370,890,388",
-      "role": ["panel"]
+      "role": ["panel"],
+      "character": ["Pepper", "Monster"],
+      "children": [
+        {
+          "role": ["speechBubble"],
+          "character": ["Pepper", "Witch 1"],
+          "text": "\"A good dark stare is worth a dozen useless curses! … Stare them down. Dominate them!\""
+        }
+      ]
     },
     {
       "imgref": "page4.jpg#xywh=44,790,900,540",
       "role": ["panel"],
+      "character": ["Pepper", "Carrot", "Monster"],
       "children": [
         {
+          "role": ["sound"],
+          "character": ["Monster"],
+          "text": "Wah!! Aah!!"
+        },
+        {
           "imgref": "page4.jpg#xywh=246,794,512,348",
-          "role": ["speechBubble"]
+          "role": ["speechBubble"],
+          "character": ["Pepper"],
+          "text": "Personally, I would've preferred to learn a few attack spells; but anyway…"
         },
         {
           "imgref": "page4.jpg#xywh=546,874,400,414",
-          "role": ["speechBubble"]
+          "role": ["speechBubble"],
+          "character": ["Pepper"],
+          "text": "shoot… no more broom or equipment, this is going to be a long trip…"
         }
       ]
     },
@@ -137,46 +183,113 @@
     },
     {
       "imgref": "page5.jpg#xywh=45,336,455,510",
-      "role": ["panel"]
+      "role": ["panel"],
+      "children": [
+        {
+          "role": ["sound"],
+          "character": ["Carrot"],
+          "text": "Groo"
+        },
+        {
+          "role": ["speechBubble"],
+          "character": ["Pepper"],
+          "text": "I'm totally worn out too Carrot… And it's been days since we've eaten anything."
+        }
+      ]
     },
     {
       "imgref": "page5.jpg#xywh=520,336,430,510",
-      "role": ["panel"]
+      "role": ["panel"],
+      "character": ["Pepper"],
+      "children": [
+        {
+          "role": ["speechBubble"],
+          "character": ["Pepper", "Witch 2"],
+          "text": "\"To know the edible plants is to know where to find ready-made potions against hunger\""
+        }
+      ]
     },
     {
       "imgref": "page5.jpg#xywh=164,916,706,414",
-      "role": ["panel"]
+      "role": ["panel"],
+      "character": ["Pepper", "Carrot"],
+      "children": [
+        {
+          "role": ["speechBubble"],
+          "character": ["Pepper"],
+          "text": "But real potions… If only she had taught me a single one!"
+        }
+      ]
     },
     {
       "imgref": "page6.jpg#xywh=84,30,840,402",
-      "role": ["panel"]
+      "role": ["panel"],
+      "character": ["Pepper", "Carrot"]
     },
     {
       "imgref": "page6.jpg#xywh=44,490,228,392",
-      "role": ["panel"]
+      "role": ["panel"],
+      "character": ["Pepper"]
     },
     {
       "imgref": "page6.jpg#xywh=294,490,642,392",
-      "role": ["panel"]
+      "role": ["panel"],
+      "character": ["Pepper", "Carrot"],
+      "children": [
+        {
+          "role": ["speechBubble"],
+          "character": ["Carrot", "Witch 3"],
+          "text": "Groo"
+        },
+        {
+          "role": ["speechBubble"],
+          "character": ["Pepper"],
+          "text": "I'm totally worn out too Carrot… And it's been days since we've eaten anything."
+        }
+      ]
     },
     {
-      "imgref": "page6.jpg#xywh=44,912,400,416"
+      "imgref": "page6.jpg#xywh=44,912,400,416",
+      "character": ["Pepper", "Carrot"],
+      "children": [
+        {
+          "role": ["speechBubble"],
+          "character": ["Pepper"],
+          "text": "Cheer up Carrot! Look, we've arrived!"
+        }
+      ]
     },
     {
       "imgref": "page6.jpg#xywh=44,912,906,416",
-      "role": ["panel"]
+      "role": ["panel"],
+      "character": ["Pepper", "Carrot", "Witch of Ah", "Two-tailed fox companion"],
+      "children": [
+        {
+          "role": ["speechBubble"],
+          "character": ["Pepper"],
+          "text": "… so there you are. Now you know the whole story."
+        },
+        {
+          "role": ["speechBubble"],
+          "character": ["Witch of Ah"],
+          "text": "… and you tell me that you're here because they haven't taught you anything?"
+        }
+      ]
     },
     {
       "imgref": "page7.jpg#xywh=40,15,914,422",
-      "role": ["panel"]
+      "role": ["panel"],
+      "character": ["Pepper", "Carrot", "Witch of Ah", "Two-tailed fox companion"]
     },
     {
       "imgref": "page7.jpg#xywh=256,450,540,210",
-      "role": ["panel"]
+      "role": ["panel"],
+      "character": ["Pepper", "Carrot"]
     },
     {
       "imgref": "page7.jpg#xywh=42,692,886,638",
-      "role": ["panel"]
+      "role": ["panel"],
+      "character": ["Pepper", "Carrot", "Witch 1", "Witch 2", "Witch 3"]
     }
   ]
 }

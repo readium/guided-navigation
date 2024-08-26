@@ -7,6 +7,7 @@
     "@type": "http://schema.org/ComicStory",
     "identifier": "https://www.peppercarrot.com/en/article377/episode-17-a-fresh-start",
     "author": "David Revoy",
+    "artist": "David Revoy",
     "translator": "Alex Gryson",
     "language": "en",
     "numberOfPages": 8,
