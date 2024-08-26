@@ -3,12 +3,12 @@
     {
       "imgref": "page1.jpg#xywh=76,19,814,635",
       "role": ["panel"],
-      "character": ["Pepper", "Carrot", "Witch 1", "Witch 2", "Witch 3"]
+      "character": ["Pepper", "Carrot", "Cayenne", "Cumin", "Thyme"]
     },
     {
       "imgref": "page1.jpg#xywh=42,694,296,297",
       "role": ["panel"],
-      "character": ["Witch 2"],
+      "character": ["Cumin"],
       "children": [
         {
           "role": ["speechBubble"],
@@ -45,7 +45,7 @@
     {
       "imgref": "page2.jpg.#xywh=58,16,878,305",
       "role": ["panel"],
-      "character": ["Witch 1", "Witch 2", "Witch 3"]
+      "character": ["Cayenne", "Cumin", "Thyme"]
     },
     {
       "imgref": "page2.jpg.#xywh=43,355,906,347",
@@ -56,7 +56,7 @@
           "imgref": "page2.jpg#xywh=43,355,570,347",
           "role": ["speechBubble"],
           "character": ["Pepper"],
-          "text": "Alright then, off to the land of the setting moons. Shichimi can tell us how to join the witched of Ah."
+          "text": "Alright then, off to the land of the setting moons. Shichimi can tell us how to join the witches of Ah."
         },
         {
           "imgref": "page2.jpg#xywh=340,355,600,347",
@@ -148,7 +148,7 @@
       "children": [
         {
           "role": ["speechBubble"],
-          "character": ["Pepper", "Witch 1"],
+          "character": ["Pepper", "Cayenne"],
           "text": "\"A good dark stare is worth a dozen useless curses! … Stare them down. Dominate them!\""
         }
       ]
@@ -204,7 +204,7 @@
       "children": [
         {
           "role": ["speechBubble"],
-          "character": ["Pepper", "Witch 2"],
+          "character": ["Pepper", "Cumin"],
           "text": "\"To know the edible plants is to know where to find ready-made potions against hunger\""
         }
       ]
@@ -238,7 +238,7 @@
       "children": [
         {
           "role": ["speechBubble"],
-          "character": ["Carrot", "Witch 3"],
+          "character": ["Carrot", "Thyme"],
           "text": "Groo"
         },
         {
@@ -262,7 +262,7 @@
     {
       "imgref": "page6.jpg#xywh=44,912,906,416",
       "role": ["panel"],
-      "character": ["Pepper", "Carrot", "Witch of Ah", "Two-tailed fox companion"],
+      "character": ["Pepper", "Carrot", "Shichimi", "Two-tailed fox companion"],
       "children": [
         {
           "role": ["speechBubble"],
@@ -279,7 +279,7 @@
     {
       "imgref": "page7.jpg#xywh=40,15,914,422",
       "role": ["panel"],
-      "character": ["Pepper", "Carrot", "Witch of Ah", "Two-tailed fox companion"]
+      "character": ["Pepper", "Carrot", "Shichimi", "Two-tailed fox companion"]
     },
     {
       "imgref": "page7.jpg#xywh=256,450,540,210",
@@ -289,7 +289,7 @@
     {
       "imgref": "page7.jpg#xywh=42,692,886,638",
       "role": ["panel"],
-      "character": ["Pepper", "Carrot", "Witch 1", "Witch 2", "Witch 3"]
+      "character": ["Pepper", "Carrot", "Cayenne", "Cumin", "Thyme"]
     }
   ]
 }
