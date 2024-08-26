@@ -40,43 +40,85 @@
       "href": "page1.jpg",
       "type": "image/jpeg",
       "width": "992",
-      "height": "1373"
+      "height": "1373",
+      "alternate": [
+        {
+          "href": "guided.json",
+          "type": "application/guided-navigation+json"
+        }
+      ]
     },
     {
       "href": "page2.jpg",
       "type": "image/jpeg",
       "width": "992",
-      "height": "1373"
+      "height": "1373",
+      "alternate": [
+        {
+          "href": "guided.json",
+          "type": "application/guided-navigation+json"
+        }
+      ]
     },
     {
       "href": "page3.jpg",
       "type": "image/jpeg",
       "width": "992",
-      "height": "1373"
+      "height": "1373",
+      "alternate": [
+        {
+          "href": "guided.json",
+          "type": "application/guided-navigation+json"
+        }
+      ]
     },
     {
       "href": "page4.jpg",
       "type": "image/jpeg",
       "width": "992",
-      "height": "1373"
+      "height": "1373",
+      "alternate": [
+        {
+          "href": "guided.json",
+          "type": "application/guided-navigation+json"
+        }
+      ]
     },
     {
       "href": "page5.jpg",
       "type": "image/jpeg",
       "width": "992",
-      "height": "1373"
+      "height": "1373",
+      "alternate": [
+        {
+          "href": "guided.json",
+          "type": "application/guided-navigation+json"
+        }
+      ]
     },
     {
       "href": "page6.jpg",
       "type": "image/jpeg",
       "width": "992",
-      "height": "1373"
+      "height": "1373",
+      "alternate": [
+        {
+          "href": "guided.json",
+          "type": "application/guided-navigation+json"
+        }
+      ]
     },
     {
       "href": "page7.jpg",
       "type": "image/jpeg",
       "width": "992",
-      "height": "1373"
+      "height": "1373",
+      "alternate": [
+        {
+          "href": "guided.json",
+          "type": "application/guided-navigation+json"
+        }
+      ]
     },
     {
       "href": "page8.jpg",
