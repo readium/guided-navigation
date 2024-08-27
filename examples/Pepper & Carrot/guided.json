@@ -26,7 +26,7 @@
       "children": [
         {
           "role": ["shoutBubble"],
-          "text": "No! I'm leaving!!"
+          "text": "NO! I'M LEAVING!!"
         },
         {
           "role": ["speechBubble"],
@@ -49,12 +49,14 @@
     {
       "imgref": "page2.jpg.#xywh=58,16,878,305",
       "role": ["panel"],
-      "character": ["Cayenne", "Cumin", "Thyme"]
+      "character": ["Cayenne", "Cumin", "Thyme"],
+      "description": "Cumin looks away, while Cayenne and Thyme stare into the sky."
     },
     {
       "imgref": "page2.jpg.#xywh=43,355,906,347",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
+      "description": "Surrounded by dark clouds, Pepper floats on her broom, turning back towards Carrot who's hanging from her backpack.",
       "children": [
         {
           "imgref": "page2.jpg#xywh=43,355,570,347",
@@ -73,17 +75,19 @@
     {
       "imgref": "page2.jpg#xywh=44,736,294,594",
       "role": ["panel"],
-      "character": ["Carrot"]
+      "character": ["Carrot"],
+      "description": "Mouth wide-opened, Carrot opens the backpack, grabs the map with his left paw and the compass with his right paw.",
     },
     {
       "imgref": "page2.jpg#xywh=356,733,280,594",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
+      "description": "Pepper looses control over her broom and as they both dive down, the content of her backpack is lost in the sky.",
       "children": [
         {
           "role": ["shoutBubble"],
           "character": ["Pepper"],
-          "text": "Drats! Turbulence! Hold on!"
+          "text": "DRATS! Turbulence! HOLD ON!"
         }
       ]
     },
@@ -91,6 +95,7 @@
       "imgref": "page2.jpg#xywh=655,736,294,594",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
+      "description": "A dark tornado lies in front of them, as thunder strikes mere meters away from the broom.",
       "children": [
         {
           "role": ["sound"],
