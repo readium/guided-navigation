@@ -251,13 +251,13 @@
       "children": [
         {
           "role": ["speechBubble"],
-          "character": ["Carrot", "Thyme"],
-          "text": "Groo"
+          "character": ["Pepper", "Thyme"],
+          "text": "\"A true witch of Chaosah needs neither compass nor map. A starry sky will suffice\""
         },
         {
           "role": ["speechBubble"],
           "character": ["Pepper"],
-          "text": "I'm totally worn out too Carrot… And it's been days since we've eaten anything."
+          "text": "… I woul've preferred a real course in divination!"
         }
       ]
     },
@@ -275,6 +275,11 @@
     {
       "imgref": "page6.jpg#xywh=44,912,906,416",
       "role": ["panel"],
+      "character": ["Pepper", "Carrot", "Shichimi", "Two-tailed fox companion"]
+    },
+    {
+      "imgref": "page7.jpg#xywh=40,15,914,422",
+      "role": ["panel"],
       "character": ["Pepper", "Carrot", "Shichimi", "Two-tailed fox companion"],
       "children": [
         {
@@ -284,15 +289,10 @@
         },
         {
           "role": ["speechBubble"],
-          "character": ["Witch of Ah"],
+          "character": ["Shichimi"],
           "text": "… and you tell me that you're here because they haven't taught you anything?"
         }
       ]
-    },
-    {
-      "imgref": "page7.jpg#xywh=40,15,914,422",
-      "role": ["panel"],
-      "character": ["Pepper", "Carrot", "Shichimi", "Two-tailed fox companion"]
     },
     {
       "imgref": "page7.jpg#xywh=256,450,540,210",
