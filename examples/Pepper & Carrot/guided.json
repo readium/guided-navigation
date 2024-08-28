@@ -111,6 +111,7 @@
     {
       "imgref": "page3.jpg#xywh=46,16,904,266",
       "role": ["panel"],
+      "description": "They crash into a tropical forest, as the broom snaps in two above the treeline.",
       "children": [
         {
           "role": ["sound"],
@@ -121,17 +122,20 @@
     {
       "imgref": "page3.jpg#xywh=46,315,904,224",
       "role": ["panel"],
-      "character": ["Pepper", "Carrot"]
+      "character": ["Pepper", "Carrot"],
+      "description": "As they lay unconscious on a floor made of rocks covered with moss, Carrot dizziliy opens his eyes.",
     },
     {
       "imgref": "page3.jpg#xywh=46,572,904,226",
       "role": ["panel"],
-      "character": ["Pepper", "Carrot"]
+      "character": ["Pepper", "Carrot"],
+      "description": "Shocked by this vision, Carrot wakes Pepper up who stares at something from the corner of her eyes.",
     },
     {
       "imgref": "page3.jpg#xywh=46,830,904,500",
       "role": ["panel"],
-      "character": ["Pepper", "Carrot", "Monster"]
+      "character": ["Pepper", "Carrot", "Monster"],
+      "description": "Now sitting on a floor filled with the bones of other living creatures, Pepper faces a monster who's clearly thinking about them as its next meal.",
     },
     {
       "imgref": "page4.jpg#xywh=42,16,444,322",

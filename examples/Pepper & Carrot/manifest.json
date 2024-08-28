@@ -9,6 +9,10 @@
     "author": "David Revoy",
     "artist": "David Revoy",
     "translator": "Alex Gryson",
+    "contributor": {
+      "name": "Hadrien Gardeur",
+      "role": "trc"
+    },
     "language": "en",
     "numberOfPages": 8,
     "readingProgression": "ltr",
