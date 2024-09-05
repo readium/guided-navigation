@@ -141,6 +141,7 @@
       "imgref": "page4.jpg#xywh=42,16,444,322",
       "role": ["panel"],
       "character": ["Pepper", "Monster"],
+      "description": "Pepper stares into the monster's eyes, mimicking Cayenne with a wheat straw in her hand.",
       "children": [
         {
           "role": ["speechBubble"],
@@ -152,10 +153,12 @@
     {
       "imgref": "page4.jpg#xywh=505,16,444,322",
       "role": ["panel"],
-      "character": ["Monster"]
+      "character": ["Monster"],
+      "description": "The monster stares back, no longer looking like much of a threat."
     },
     {
       "imgref": "page4.jpg#xywh=44,370,890,388",
+      "description": "Forehead to forehead, Pepper continues to stare into the monster's eyes as she quotes Cayenne. The monster sweats profusely under this threat.",
       "role": ["panel"],
       "character": ["Pepper", "Monster"],
       "children": [
@@ -170,6 +173,7 @@
       "imgref": "page4.jpg#xywh=44,790,900,540",
       "role": ["panel"],
       "character": ["Pepper", "Carrot", "Monster"],
+      "description": "Scratching her head as she speaks, Pepper holds Carrot in her arms. In the background, the monster runs away while crying.",
       "children": [
         {
           "role": ["sound"],
@@ -180,7 +184,7 @@
           "imgref": "page4.jpg#xywh=246,794,512,348",
           "role": ["speechBubble"],
           "character": ["Pepper"],
-          "text": "Personally, I would've preferred to learn a few attack spells; but anyway…"
+          "text": "Personally, I would've preferred to learn a few good attack spells; but anyway…"
         },
         {
           "imgref": "page4.jpg#xywh=546,874,400,414",
