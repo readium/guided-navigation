@@ -76,7 +76,7 @@
       "imgref": "page2.jpg#xywh=44,736,294,594",
       "role": ["panel"],
       "character": ["Carrot"],
-      "description": "Mouth wide-opened, Carrot opens the backpack, grabs the map with his left paw and the compass with his right paw.",
+      "description": "Mouth wide-opened, Carrot opens the backpack, grabs the map with his left paw and the compass with his right paw."
     },
     {
       "imgref": "page2.jpg#xywh=356,733,280,594",
@@ -123,19 +123,19 @@
       "imgref": "page3.jpg#xywh=46,315,904,224",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
-      "description": "As they lay unconscious on a floor made of rocks covered with moss, Carrot dizziliy opens his eyes.",
+      "description": "As they lay unconscious on a floor made of rocks covered with moss, Carrot dizziliy opens his eyes."
     },
     {
       "imgref": "page3.jpg#xywh=46,572,904,226",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
-      "description": "Shocked by this vision, Carrot wakes Pepper up who stares at something from the corner of her eyes.",
+      "description": "Shocked by this vision, Carrot wakes Pepper up who stares at something from the corner of her eyes."
     },
     {
       "imgref": "page3.jpg#xywh=46,830,904,500",
       "role": ["panel"],
       "character": ["Pepper", "Carrot", "Monster"],
-      "description": "Now sitting on a floor filled with the bones of other living creatures, Pepper faces a monster who's clearly thinking about them as its next meal.",
+      "description": "Now sitting on a floor filled with the bones of other living creatures, Pepper faces a monster who's clearly thinking about them as its next meal."
     },
     {
       "imgref": "page4.jpg#xywh=42,16,444,322",
@@ -196,11 +196,13 @@
     },
     {
       "imgref": "page5.jpg#xywh=42,14,908,290",
-      "role": ["panel"]
+      "role": ["panel"],
+      "description": "The desert stretches across the horizon. From this perspective, Pepper and Carrot look like two small figures. The land is mostly barren, but a few plants are visible across the dunes."
     },
     {
       "imgref": "page5.jpg#xywh=45,336,455,510",
       "role": ["panel"],
+      "description": "Carrot holds his paws on his belly, as his empty stomach makes a sound. Pepper wipes the sweat from her forehead as she leans on a large stick.",
       "children": [
         {
           "role": ["sound"],
@@ -218,11 +220,12 @@
       "imgref": "page5.jpg#xywh=520,336,430,510",
       "role": ["panel"],
       "character": ["Pepper"],
+      "description": "Staring at a plant that looks like a giant radish, Pepper makes her best impression of Cumin.",
       "children": [
         {
           "role": ["speechBubble"],
           "character": ["Pepper", "Cumin"],
-          "text": "\"To know the edible plants is to know where to find ready-made potions against hunger\""
+          "text": "\"To know the edible plants is to know where to find ready-made potions against hunger!\""
         }
       ]
     },
@@ -230,28 +233,32 @@
       "imgref": "page5.jpg#xywh=164,916,706,414",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
+      "description": "Sitting on the floor, Pepper and Carrot are both eating these giant radishes, looking hardly impressed by their meal.",
       "children": [
         {
           "role": ["speechBubble"],
           "character": ["Pepper"],
-          "text": "But real potions… If only she had taught me a single one!"
+          "text": "But real potions?… If only she had taught me a single one!"
         }
       ]
     },
     {
       "imgref": "page6.jpg#xywh=84,30,840,402",
       "role": ["panel"],
-      "character": ["Pepper", "Carrot"]
+      "character": ["Pepper", "Carrot"],
+      "description": "In a different land, Pepper and Carrot arrive at a crossroad in the middle of the night. With eight different potential directions, Pepper points towards one of them."
     },
     {
       "imgref": "page6.jpg#xywh=44,490,228,392",
       "role": ["panel"],
-      "character": ["Pepper"]
+      "character": ["Pepper"],
+      "description": "Pepper stares into a brightly lit sky full of stars."
     },
     {
       "imgref": "page6.jpg#xywh=294,490,642,392",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
+      "description": "Pepper and Carrot are both holding walking sticks. From the look of Pepper's hair and clothes, the toil of their trip can be seen. Pepper makes her best impression of something that Thyme would typically say.",
       "children": [
         {
           "role": ["speechBubble"],
@@ -261,13 +268,14 @@
         {
           "role": ["speechBubble"],
           "character": ["Pepper"],
-          "text": "… I woul've preferred a real course in divination!"
+          "text": "… I would've preferred a real course in divination!"
         }
       ]
     },
     {
       "imgref": "page6.jpg#xywh=44,912,400,416",
       "character": ["Pepper", "Carrot"],
+      "description": "In a land where three moons can be seen in the sky, Pepper drops her walking stick and points excitedly in front of her, waving hello with her other hand.",
       "children": [
         {
           "role": ["speechBubble"],
@@ -279,12 +287,14 @@
     {
       "imgref": "page6.jpg#xywh=44,912,906,416",
       "role": ["panel"],
-      "character": ["Pepper", "Carrot", "Shichimi", "Two-tailed fox companion"]
+      "character": ["Pepper", "Carrot", "Shichimi", "Two-tailed fox companion"],
+      "description": "Shichimi waves back with both hands. In the background, we can see temples half hanging in the sky, with waterfalls dropping from these pieces of land."
     },
     {
       "imgref": "page7.jpg#xywh=40,15,914,422",
       "role": ["panel"],
       "character": ["Pepper", "Carrot", "Shichimi", "Two-tailed fox companion"],
+      "description": "Pepper, Shichimi and their companions are all sitting in the grass, enjoying a cup of hot tea while chatting.",
       "children": [
         {
           "role": ["speechBubble"],
@@ -301,12 +311,14 @@
     {
       "imgref": "page7.jpg#xywh=256,450,540,210",
       "role": ["panel"],
-      "character": ["Pepper", "Carrot"]
+      "character": ["Pepper", "Carrot"],
+      "description": "Pepper and Carrot look back in astonishment, suddenly realizing that they couldn't have accomplished what they did without the lessons learned in Chaosah."
     },
     {
       "imgref": "page7.jpg#xywh=42,692,886,638",
       "role": ["panel"],
-      "character": ["Pepper", "Carrot", "Cayenne", "Cumin", "Thyme"]
+      "character": ["Pepper", "Carrot", "Cayenne", "Cumin", "Thyme"],
+      "description": "Back in Chaosah, Pepper and Carrot hug all three witches on the front porch of their house. A happy ending for everyone, especially the three witches who can barely contain their surprise."
     }
   ]
 }
