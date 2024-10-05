@@ -60,7 +60,7 @@
 {
   "role": ["paragraph"],
   "text": {
-    "ssml": "<speak xml:lang="en">This job requires a certain <voice xml:lang="fr">savoir faire</voice> that can only be acquired over time.</speak>"
+    "ssml": "<speak xml:lang=\"en\">This job requires a certain <voice xml:lang=\"fr\">savoir faire</voice> that can only be acquired over time.</speak>"
   }
 }
 ```
