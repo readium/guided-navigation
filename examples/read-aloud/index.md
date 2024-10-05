@@ -106,6 +106,16 @@
   <span>★</span>
   <span>☆</span>
 </span>
+<figure role="img" aria-labelledby="cat-caption"> 
+  <pre>
+ /\_/\
+( o.o )
+ > ^ <
+  </pre>
+ <figcaption id="cat-caption">
+  ASCII Art of a cat face
+ </figcaption>
+</figure>
 ```
 
 ### JSON
@@ -114,14 +124,17 @@
 {
   "guided": [
     {
-      "role": "image",
+      "role": ["image"],
       "imgref": "image1.avif",
       "description": "Alternative text using the alt attribute"
     },
     {
-      "role": "image",
-      "text": "★★★★☆",
+      "role": ["image"],
       "description": "Rating: 4 out of 5 stars"
+    },
+    {
+      "role": ["figure", "image"],
+      "description": "ASCII Art of a cat face"
     }
   ]
 }
