@@ -10,6 +10,7 @@
 | `blockquote` | | | `<blockquote>` | Represents a section that is quoted from another source. |
 | `caption` | | | `<caption>` or `<figcaption>` | A caption for an image or a table. |
 | `cell` | [`table-cell`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) |  `cell` | `<td>` | A single cell of tabular data or content. |
+| `columnheader` |  |  `columnheader` | `<th>` with scope `col` | The header cell for a column, establishing a relationship between it and the other cells in the same column. |
 | `complementary` | | `complementary` | | A supporting section of the document, designed to be complementary to the main content at a similar level in the DOM hierarchy, but remains meaningful when separated from the main content. |
 | `definition` | [`glossdef`](https://w3c.github.io/epub-specs/epub33/ssv/#h_glossaries) | `definition` | `<dd>` | A definition of a term or concept. |
 | `figure` | [`figure`](https://www.w3.org/TR/epub-ssv-11/#sec-figures) | `figure` | `<figure>` | An illustration, diagram, photo, code listing or similar, referenced from the text of a work, and typically annotated with a title, caption and/or credits. |
@@ -21,9 +22,11 @@
 | `main` | | `main` | | Content that is directly related to or expands upon the central topic of the document. |
 | `math` | | `math` | `<math>` | Content that represents a mathematical expression. |
 | `navigation` | | `navigation` | `<nav>` | Represents a section of a page that links to other pages or to parts within the page: a section with navigation links. |
+| `paragraph` | | | `<p>` | Represents a paragraph. |
 | `preformatted` | | | `<pre>` | Represents preformatted text which is to be presented exactly as written. |
 | `region` | | `region` | | Represents content that is relevant to a specific, author-specified purpose and sufficiently important that users will likely want to be able to navigate to the section easily and to have it listed in a summary of the page. |
 | `row` | [`table-row`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | `row` | `<tr>` | A row of data or content in a tabular structure. |
+| `rowheader` |  | `rowheader` | `<th>` scoped to `row` | The header cell for a row, establishing a relationship between it and the other cells in the same row. |
 | `section` | | | `<section>` | Represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. |
 | `table` | [`table`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | `table` | `<table>` | A structure containing data or content laid out in tabular form. |
 | `term` | [`glossterm`](https://w3c.github.io/epub-specs/epub33/ssv/#h_glossaries) | `term` | `<dfn>` or `<dt>` | A word or phrase with a corresponding definition.|
@@ -38,7 +41,7 @@
 | `afterword` | [`doc-afterword`](https://www.w3.org/TR/dpub-aria-1.0/#doc-afterword) | [`afterword`](https://www.w3.org/TR/epub-ssv-11/#sec-sections) | A closing statement from the author or a person of importance, typically providing insight into how the content came to be written, its significance, or related events that have transpired since its timeline. |
 | `appendix` | [`doc-appendix`](https://www.w3.org/TR/dpub-aria-1.0/#doc-appendix) | [`appendix`](https://www.w3.org/TR/epub-ssv-11/#sec-document-references) | A section of supplemental information located after the primary content that informs the content but is not central to it. |
 | `backlink` | [`doc-backlink`](https://www.w3.org/TR/dpub-aria-1.0/#doc-backlink) | [`backlink`](https://www.w3.org/TR/epub-ssv-11/#links) | A link that allows the user to return to a related location in the content (e.g., from a footnote to its reference or from a glossary definition to where a term is used). |
-| `bibliography` | [`doc-biblioentry`](https://www.w3.org/TR/dpub-aria-1.0/#doc-bibliography) | [`bibliography`](https://www.w3.org/TR/epub-ssv-11/#h_bibliographies) | A list of external references cited in the work, which may be to print or digital sources.|
+| `bibliography` | [`doc-bibliography`](https://www.w3.org/TR/dpub-aria-1.0/#doc-bibliography) | [`bibliography`](https://www.w3.org/TR/epub-ssv-11/#h_bibliographies) | A list of external references cited in the work, which may be to print or digital sources.|
 | `biblioref` | [`doc-biblioref`](https://www.w3.org/TR/dpub-aria-1.0/#doc-biblioref) | [`biblioref`](https://www.w3.org/TR/epub-ssv-11/#links) | A reference to a bibliography entry.|
 | `chapter` | [`doc-chapter`](https://www.w3.org/TR/dpub-aria-1.0/#doc-chapter) | [`chapter`](https://www.w3.org/TR/epub-ssv-11/#sec-divisions) | A major thematic section of content in a work. |
 | `colophon` | [`doc-colophon`](https://www.w3.org/TR/dpub-aria-1.0/#doc-colophon) | [`colophon`](https://www.w3.org/TR/epub-ssv-11/#sec-document-references) | A short section of production notes particular to the edition (e.g., describing the typeface used), often located at the end of a work. |

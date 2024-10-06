@@ -27,6 +27,11 @@
         "$ref": "roles.schema.json"
       }
     },
+    "level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6
+    },
     "children": {
       "type": "array",
       "items": {
