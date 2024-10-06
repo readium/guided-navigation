@@ -191,6 +191,13 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 
 ## Appendix B - Examples
 
+A few additional documents are available in order to illustrate how Guided Navigation can be leveraged for:
+
+- [Accessible comics](examples/Pepper%20%26%20Carrot/guided.json)
+- [Read aloud](examples/read-aloud/)
+
+The following examples are also available to illustrate how other types of publication can be mapped to Guided Navigation:
+
 *Example 4: Synchronizing text with pre-recorded audio*
 
 ```json
@@ -260,59 +267,6 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
     {
       "role": ["panel"],
       "imgref": "page10.jpg#xywh=percent:70,50,30,50"
-    }
-  ]
-}
-```
-
-*Example 8: Accessible comic with a description and textual equivalent of a bubble*
-
-```json
-{
-  "guided": [
-    {
-      "role": ["page"],
-      "imgref": "page10.jpg",
-      "children": [
-        {
-          "role": ["panel"],
-          "imgref": "page10.jpg#xywh=percent:10,10,60,40",
-          "description": "Emily marche seule, elle semble perdue dans ses pensées. Derrière elle, deux policiers la suivent du regard et échangent à son propos.",
-          "character": ["Emily", "Premier policier", "Deuxième policier"],
-          "children": [
-            {
-              "imgref": "page10.jpg#xywh=percent:10,10,30,20",
-              "character": ["Emily"],
-              "children": [
-                {
-                  "role": ["thoughtBubble"],
-                  "text": "Quel étrange sentiment."
-                },
-                {
-                  "role": ["thoughtBubble"],
-                  "text": "J'accède enfin à ce poste tant convoité, et pourtant…"
-                }
-              ]
-            },
-            {
-              "imgref": "page10.jpg#xywh=percent:40,10,20,20",
-              "character": ["Premier policier", "Deuxième policier"],
-              "children": [
-                {
-                  "role": ["speechBubble"],
-                  "text": "Hé, c'est pas elle, la fille qui a arrêté le type de l'autre soir, celui qu'on a envoyé à Wormwood ?",
-                  "character": ["Premier policier"]
-                },
-                {
-                  "role": ["speechBubble"],
-                  "text": "Ouais ! Il paraît qu'Hawkins y serait passé si elle n'avait pas été là.",
-                  "character": ["Deuxième policier"]
-                }
-              ]
-            }
-          ]
-        }
-      ]
     }
   ]
 }
