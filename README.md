@@ -194,7 +194,7 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 A few additional documents are available in order to illustrate how Guided Navigation can be leveraged for:
 
 - [Accessible comics](examples/Pepper%20%26%20Carrot/guided.json)
-- [Read aloud](examples/read-aloud/)
+- [Read aloud](examples/read-aloud/index.md)
 
 The following examples are also available to illustrate how other types of publication can be mapped to Guided Navigation:
 
@@ -221,18 +221,18 @@ The following examples are also available to illustrate how other types of publi
 }
 ```
 
-*Example 5: Accessible audiobook using text references*
+*Example 5: Accessible audiobook using text fragments*
 
 ```json
 {
   "guided": [
     {
       "audioref": "chapter1.mp3#t=0,20",
-      "textref": "chapter1.html#par1"
+      "textref": "chapter1.html#:~:text=It%20is%20a%20truth,want%20of%20a%20wife"
     },
     { 
-      "audioref": "chapter1.mp3#t=20,28",
-      "textref": "chapter1.html#par2"
+      "audioref": "chapter1.mp3#t=20,48",
+      "textref": "chapter1.html#:~:text=However%20little%20known,of%20their%20daughters"
     }
   ]
 }
@@ -250,23 +250,6 @@ The following examples are also available to illustrate how other types of publi
     { 
       "audioref": "chapter1.mp3#t=7,16",
       "text": "Which is followed by a second, slightly longer sentence."
-    }
-  ]
-}
-```
-
-*Example 7: Panel by panel navigation in a manga*
-
-```json
-{
-  "guided": [
-    {
-      "role": ["panel"],
-      "imgref": "page10.jpg#xywh=percent:10,10,60,40"
-    },
-    {
-      "role": ["panel"],
-      "imgref": "page10.jpg#xywh=percent:70,50,30,50"
     }
   ]
 }
