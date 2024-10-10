@@ -142,20 +142,54 @@
 
 ## Pagebreaks
 
+> This is an experimental approach based on templated text where `{pagebreak}` can be substituted by the reading system based on user preferences.
+
 ### HTML
 
 ```html
 <span id="pg04" role="doc-pagebreak" epub:type="pagebreak" title="4"/>
+<p>And the next pagebreak is in the middle <span id="pg05" role="doc-pagebreak" epub:type="pagebreak" title="4"/> of a sentence.</p>
 ```
 
 ### JSON
 
 ```json
 {
-  "role": ["pagebreak"],
-  "text": "4"
+  "guided": [
+    {
+      "role": ["pagebreak"],
+      "text": "4"
+    },
+    {
+      "role": ["paragraph"],
+      "text": "And the next pagebreak is in the middle {pagebreak} of a sentence.",
+      "children": [
+        {
+          "role": ["pagebreak"],
+          "text": "5"
+        }
+      ]
+    }
+  ]
 }
 ```
+
+### Read-aloud output
+
+**User preference set to read pagebreaks at the end of the text**
+
+* Pagebreak. Page: 4.
+* And the next pagebreak is in the middle of a sentence.
+* Pagebreak. Page: 5.
+
+**User preference set to read pagebreaks in the middle of the text**
+
+* Pagebreak. Page: 4.
+* And the next pagebreak is in the middle (Pagebreak. Page: 5.) of a sentence.
+
+**User preference set to skip pagebreaks**
+
+* And the next pagebreak is in the middle of a sentence.
 
 ## Lists
 
