@@ -15,7 +15,7 @@ This document defines a syntax for Guided Navigation Documents, serialized in JS
 
 ## Use cases
 
-* Synchronizing text with pre-recorded audio, for example in order to support [Media Overlays in EPUB](https://www.w3.org/TR/epub/#sec-media-overlays) or to distribute accessible audiobooks.
+* Synchronizing text with pre-recorded audio, for example in order to support [Media Overlays](https://www.w3.org/TR/epub/#sec-media-overlays) in EPUB, [DAISY publications](https://daisy.org/activities/standards/daisy/) or to distribute accessible audiobooks using the [Audiobook Profile](https://readium.org/webpub-manifest/profiles/audiobook) of RWPM.
 * Extracting a Guided Navigation Document from an HTML/XHTML resource for a read aloud feature or a reader mode.
 * Panel by panel navigation in comics/manga to facilitate reading on smaller screens.
 * Providing a textual transcript and/or image descriptions for highly illustrated publications such as [Divina](https://readium.org/webpub-manifest/profiles/divina).
