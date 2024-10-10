@@ -246,8 +246,8 @@
 **User preference set to read notes at the end of the text**
 
 * This text has a footnote in the same resource and an endnote.
-* Footnote: Text of the footnote.
-* Endnote: Text of the endnote.
+* Start of the footnote. Text of the footnote. End of the footnote.
+* Start of the endnote. Text of the endnote. End of the endnote.
 * This is a paragraph without a footnote.
 
 **User preference set to read notes in the middle of the text**
