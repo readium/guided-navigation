@@ -194,7 +194,7 @@ For the purpose of validating a Readium Guided Navigation Document, use the foll
 A few additional documents are available in order to illustrate how Guided Navigation can be leveraged for:
 
 - [Accessible comics](examples/Pepper%20%26%20Carrot/guided.json)
-- [Read aloud](examples/read-aloud/index.md)
+- [Read aloud](examples/read-aloud/)
 
 The following examples are also available to illustrate how other types of publication can be mapped to Guided Navigation:
 
