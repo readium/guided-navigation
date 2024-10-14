@@ -1,4 +1,4 @@
-# Read aloud examples
+# Read Aloud Examples
 
 > This document is a work in progress meant to explore some of the common use cases that a read aloud implementation based on Guided Navigation will have to deal with.
 
