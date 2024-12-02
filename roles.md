@@ -85,16 +85,24 @@
 
 ## List of skippable roles
 
+### Ancillary content
+
+* `aside`
 * `bibliography`
 * `endnotes`
 * `footnote`
+* `noteref`
+* `pullquote`
+
+### Navigation
+
 * `landmarks`
 * `loa`
 * `loi`
 * `lot`
 * `lov`
 * `pagebreak`
-* `pullquote`
+* `toc`
 
 ## List of escapable roles
 
