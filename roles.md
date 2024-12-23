@@ -24,6 +24,7 @@
 | `navigation` | | `navigation` | `<nav>` | Represents a section of a page that links to other pages or to parts within the page: a section with navigation links. |
 | `paragraph` | | | `<p>` | Represents a paragraph. |
 | `preformatted` | | | `<pre>` | Represents preformatted text which is to be presented exactly as written. |
+| `presentation` | | `presentation` or `none` | | Represents an element being used only for presentation and therefore that does not have any accessibility semantics. |
 | `region` | | `region` | | Represents content that is relevant to a specific, author-specified purpose and sufficiently important that users will likely want to be able to navigate to the section easily and to have it listed in a summary of the page. |
 | `row` | [`table-row`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | `row` | `<tr>` | A row of data or content in a tabular structure. |
 | `rowheader` |  | `rowheader` | `<th>` scoped to `row` | The header cell for a row, establishing a relationship between it and the other cells in the same row. |

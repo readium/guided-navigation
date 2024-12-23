@@ -98,7 +98,7 @@
 ### HTML
 
 ```html
-<img src="image1.avif" alt="Alternative text using the alt attribute" />
+<img src="image1.avif" alt="Alternative text using the alt attribute">
 <span role="img" aria-label="Rating: 4 out of 5 stars">
   <span>★</span>
   <span>★</span>
@@ -106,11 +106,11 @@
   <span>★</span>
   <span>☆</span>
 </span>
-<figure role="img" aria-labelledby="cat-caption"> 
+<figure aria-labelledby="cat-caption"> 
   <pre>
  /\_/\
 ( o.o )
- > ^ <
+   ^ 
   </pre>
  <figcaption id="cat-caption">
   ASCII Art of a cat face
@@ -133,7 +133,7 @@
       "description": "Rating: 4 out of 5 stars"
     },
     {
-      "role": ["figure", "image"],
+      "role": ["figure"],
       "description": "ASCII Art of a cat face"
     }
   ]
