@@ -29,6 +29,7 @@
 | `row` | [`table-row`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | `row` | `<tr>` | A row of data or content in a tabular structure. |
 | `rowheader` |  | `rowheader` | `<th>` scoped to `row` | The header cell for a row, establishing a relationship between it and the other cells in the same row. |
 | `section` | | | `<section>` | Represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. |
+| `separator` | | `separator` | `<hr>` | Indicates the element is a divider that separates and distinguishes sections of content or groups of menuitems. |
 | `table` | [`table`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | `table` | `<table>` | A structure containing data or content laid out in tabular form. |
 | `term` | [`glossterm`](https://w3c.github.io/epub-specs/epub33/ssv/#h_glossaries) | `term` | `<dfn>` or `<dt>` | A word or phrase with a corresponding definition.|
 | `video` | | | `<video>` | Embedded videos, movies, or audio files with captions in a document.|
