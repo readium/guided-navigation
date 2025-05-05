@@ -93,6 +93,7 @@
 
 * `aside`
 * `bibliography`
+* `details`
 * `endnotes`
 * `footnote`
 * `noteref`
