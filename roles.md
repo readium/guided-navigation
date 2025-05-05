@@ -13,6 +13,7 @@
 | `columnheader` |  |  `columnheader` | `<th>` with scope `col` | The header cell for a column, establishing a relationship between it and the other cells in the same column. |
 | `complementary` | | `complementary` | | A supporting section of the document, designed to be complementary to the main content at a similar level in the DOM hierarchy, but remains meaningful when separated from the main content. |
 | `definition` | [`glossdef`](https://w3c.github.io/epub-specs/epub33/ssv/#h_glossaries) | `definition` | `<dd>` | A definition of a term or concept. |
+| `details` | | | `<details>` | A disclosure widget that can be expanded. |
 | `figure` | [`figure`](https://www.w3.org/TR/epub-ssv-11/#sec-figures) | `figure` | `<figure>` | An illustration, diagram, photo, code listing or similar, referenced from the text of a work, and typically annotated with a title, caption and/or credits. |
 | `header` | | | `<header>` | Represents introductory content, typically a group of introductory or navigational aids. |
 | `heading` | | `heading` | `<h1>` through `<h6>` | A heading for a section of the page. |
@@ -30,6 +31,7 @@
 | `rowheader` |  | `rowheader` | `<th>` scoped to `row` | The header cell for a row, establishing a relationship between it and the other cells in the same row. |
 | `section` | | | `<section>` | Represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. |
 | `separator` | | `separator` | `<hr>` | Indicates the element is a divider that separates and distinguishes sections of content or groups of menuitems. |
+| `summary` | | | `<summary>` | A summary of an element contained in details. |
 | `table` | [`table`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | `table` | `<table>` | A structure containing data or content laid out in tabular form. |
 | `term` | [`glossterm`](https://w3c.github.io/epub-specs/epub33/ssv/#h_glossaries) | `term` | `<dfn>` or `<dt>` | A word or phrase with a corresponding definition.|
 | `video` | | | `<video>` | Embedded videos, movies, or audio files with captions in a document.|
@@ -110,5 +112,11 @@
 
 * `aside`
 * `figure`
+  * `caption` 
 * `list`
+  * `listItem` 	
 * `table`
+  * `columnheader`
+  * `rowheader`
+  * `row`
+  * `cell`
