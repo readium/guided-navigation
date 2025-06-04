@@ -66,7 +66,7 @@ Guided Navigations Objects <strong class="rfc">should</strong> include one or mo
 | `children` | Items that are children of the containing Guided Navigation Object. | Guided Navigation Objects |
 | `imgref` | References an image or a fragment of it. | URI |
 | `role`     | Convey the structural semantics of a publication | Array of [roles](#4-roles) |
-| `text`  | Textual equivalent of the resources or fragment of the resources referenced by the current Guided Navigation Object. | String |
+| `text`  | Textual equivalent of the resources or fragment of the resources referenced by the current Guided Navigation Object. | String or Text Object |
 | `textref`  | References a textual resource or a fragment of it. | URI |
 
 
@@ -142,8 +142,24 @@ If this Guided Navigation Document contains any `audioref` element, then the Lin
 ]
 ```
 
-## 3. Fragments
+## 3. Roles
 
+> [!NOTE]
+> There are a number of open issues that relate to roles:
+> 
+> - Cherrypicking roles from EPUB 3 Structural Semantics Vocabulary 1.1: <https://github.com/readium/guided-navigation/discussions/2>
+> - Identifying skippable and escapable roles: <https://github.com/readium/guided-navigation/discussions/3>
+> - Defining a list of roles for Divina: <https://github.com/readium/guided-navigation/discussions/1>
+
+Roles are inherited from multiple specifications such as [HTML](https://html.spec.whatwg.org/), [ARIA](https://www.w3.org/TR/wai-aria-1.1/), [DPUB ARIA](https://www.w3.org/TR/dpub-aria-1.1/) and [EPUB 3 Semantics Vocabulary](https://www.w3.org/TR/epub-ssv-11/), in order to convey the structural semantics of a publication.
+
+The full list of supported roles is available at: <https://readium.org/guided-navigation/roles>
+
+Roles <strong class="rfc">should</strong> be used by reading applications to implement skippability (based on user preferences, some items could be skipped) and escapability (allowing users to escape from the current context, for example escaping from the content of a table to go back to the main text).
+
+## 4. Media References
+
+> [!NOTE]
 > The following media fragments have been identified as potential candidates for fragments in `audioref`, `imgref` and `textref`:
 > 
 >**Audio**: <https://www.w3.org/TR/media-frags/#naming-time>
@@ -163,19 +179,27 @@ If this Guided Navigation Document contains any `audioref` element, then the Lin
 > - Support for non-rectangular regions: <https://github.com/readium/guided-navigation/discussions/5>
 > - Support for CSS selectors and positions in `textref`: <https://github.com/readium/guided-navigation/discussions/6>
 
-## 4. Roles
+## 5. Text
 
-> There are a number of open issues that relate to roles:
-> 
-> - Cherrypicking roles from EPUB 3 Structural Semantics Vocabulary 1.1: <https://github.com/readium/guided-navigation/discussions/2>
-> - Identifying skippable and escapable roles: <https://github.com/readium/guided-navigation/discussions/3>
-> - Defining a list of roles for Divina: <https://github.com/readium/guided-navigation/discussions/1>
+| Name | Description | Format |
+| ---- | ----------- | ------ |
+| `language` | Main language for the text, which can be locally overriden in the SSML representation. | BCP-47 language tag |
+| `plain` | Contains a plain text representation of the text. | String |
+| `ssml` | Contains an SSML representation of the text. | SSML |
 
-Roles are inherited from multiple specifications such as [HTML](https://html.spec.whatwg.org/), [ARIA](https://www.w3.org/TR/wai-aria-1.1/), [DPUB ARIA](https://www.w3.org/TR/dpub-aria-1.1/) and [EPUB 3 Semantics Vocabulary](https://www.w3.org/TR/epub-ssv-11/), in order to convey the structural semantics of a publication.
 
-The full list of supported roles is available at: <https://readium.org/guided-navigation/roles>
+*Example 4: Text representation with both plain text and SSML*
 
-Roles <strong class="rfc">should</strong> be used by reading applications to implement skippability (based on user preferences, some items could be skipped) and escapability (allowing users to escape from the current context, for example escaping from the content of a table to go back to the main text).
+```json
+{
+    "imgref": "page10.jpg#xywh=percent:10,10,20,20",
+    "text": {
+      "plain": "The SSML standard is defined by the W3C.",
+      "language": "en",
+      "ssml": "The <say-as interpret-as=\"characters\">SSML</say-as> standard <break time=\"1s\"/>is defined by the<sub alias=\"World Wide Web Consortium\">W3C</sub>."
+    }
+}
+```
 
 ## Appendix A - JSON Schema
 
@@ -198,7 +222,7 @@ A few additional documents are available in order to illustrate how Guided Navig
 
 The following examples are also available to illustrate how other types of publication can be mapped to Guided Navigation:
 
-*Example 4: Synchronizing text with pre-recorded audio*
+*Example 5: Synchronizing text with pre-recorded audio*
 
 ```json
 {
@@ -221,7 +245,7 @@ The following examples are also available to illustrate how other types of publi
 }
 ```
 
-*Example 5: Accessible audiobook using text fragments*
+*Example 6: Accessible audiobook using text fragments*
 
 ```json
 {
@@ -238,7 +262,7 @@ The following examples are also available to illustrate how other types of publi
 }
 ```
 
-*Example 6: Accessible audiobook using embedded text*
+*Example 7: Accessible audiobook using embedded text*
 
 ```json
 {
@@ -257,35 +281,13 @@ The following examples are also available to illustrate how other types of publi
 
 ## Appendix C - Potential additions
 
-### Potential object representation for `text`
-
-| Name | Description | Format |
-| ---- | ----------- | ------ |
-| `language` | Main language for the text, which can be locally overriden in the SSML representation. | BCP-47 language tag |
-| `plain` | Contains a plain text representation of the text. | String |
-| `ssml` | Contains an SSML representation of the text. | SSML |
-
-
-*Example 9: Text representation with both plain text and SSML*
-
-```json
-{
-    "imgref": "page10.jpg#xywh=percent:10,10,20,20",
-    "text": {
-      "plain": "The SSML standard is defined by the W3C.",
-      "language": "en",
-      "ssml": "<speak>The <say-as interpret-as=\"characters\">SSML</say-as>standard <break time=\"1s\"/>is defined by the<sub alias=\"World Wide Web Consortium\">W3C</sub>.</speak>"
-    }
-}
-```
-
 ### Potential format for `description`
 
 | Name | Description | Format |
 | ---- | ----------- | ------ |
 | `description` | Text, audio or image description for the current Guided Navigation Object. | Guided Navigation Object without `children` |
 
-*Example 10: Audio and text description for an image*
+*Example 8: Audio and text description for an image*
 
 ```json
 {
@@ -320,7 +322,7 @@ The following examples are also available to illustrate how other types of publi
 | ---- | ----------- | ------ |
 | `multipleImages` | Two or more references to images or regions of different images. | Array of URI |
 
-*Example 11: Two page spread that contains a panel across the entire spread*
+*Example 9: Two page spread that contains a panel across the entire spread*
 
 ```json
 {
@@ -348,7 +350,7 @@ The following examples are also available to illustrate how other types of publi
 | ---- | ----------- | ------ |
 | `character` | Identifies one or more character present in a given Guided Navigation object. | Array of strings |
 
-*Example 12: Characters present in the panel of a comicbook*
+*Example 10: Characters present in the panel of a comicbook*
 
 ```json
 {
