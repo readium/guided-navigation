@@ -164,8 +164,8 @@
     {
       "role": ["paragraph"],
       "text": {
-        "plain": "And the next pagebreak is in the middle of a sentence.", 
-        "ssml": "And the next pagebreak is in the middle <readium:pagebreak id="page5" /> of a sentence.",
+        "plain": "And the next pagebreak is in the middle  of a sentence.", 
+        "ssml": "And the next pagebreak is in the middle <readium:pagebreak id=\"page5\" /> of a sentence.",
         "language": "en"
       }
       "children": [
@@ -252,7 +252,7 @@
       "role": ["paragraph"],
       "text": {
         "plain": "This text has a footnote in the same resource and an endnote.",
-        "ssml": "This text has a footnote in the same resource <readium:noteref id="note1" /> and an endnote <readium:noteref id="note2" />.",
+        "ssml": "This text has a footnote in the same resource <readium:noteref id=\"note1\" /> and an endnote <readium:noteref id=\"note2\" />.",
         "language": "en"
       },
       "children": [
