@@ -309,6 +309,7 @@ The following examples are also available to illustrate how other types of publi
 
 ### Potential format for `multipleImages`
 
+> [!NOTE]
 > This is under discussion at:
 > 
 > - How should we handle references to multiple images? <https://github.com/readium/guided-navigation/discussions/9>

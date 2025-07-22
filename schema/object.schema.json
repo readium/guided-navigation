@@ -32,8 +32,7 @@
       }
     },
     "role": {
-      "type": ["string", "array"],
-      "$ref": "roles.schema.json",
+      "type": ["array"],
       "items": {
         "type": "string",
         "$ref": "roles.schema.json"
@@ -50,6 +49,9 @@
         "$ref": "object.schema.json"
       },
       "minItems": 1
+    },
+    "description" : {
+      "$ref": "object.schema.json"
     }
   },
   "anyOf": [
