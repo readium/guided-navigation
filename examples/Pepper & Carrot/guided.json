@@ -4,17 +4,24 @@
       "imgref": "page1.jpg#xywh=76,19,814,635",
       "role": ["panel"],
       "character": ["Pepper", "Carrot", "Cayenne", "Cumin", "Thyme"],
-      "description": "Pepper walks away from the house of the witches of Chaosah with a heavy backpack on her shoulders and Carrot attached to her leg. In the background, the three witches are standing on the front porch, looking sadly at Pepper."
+      "description": {
+        "audioref": "audio/page1-panel1-description.mp3",
+        "text": "Pepper walks away from the house of the witches of Chaosah with a heavy backpack on her shoulders and Carrot attached to her leg. In the background, the three witches are standing on the front porch, looking sadly at Pepper."
+      }
     },
     {
       "imgref": "page1.jpg#xywh=42,694,296,297",
       "role": ["panel"],
       "character": ["Cumin"],
-      "description": "Cumin looks sadder than the rest of the witches and shakily addresses Pepper.",
+      "description": {
+        "audioref": "audio/page1-panel2-description.mp3",
+        "text": "Cumin looks sadder than the rest of the witches and shakily addresses Pepper."
+      },
       "children": [
         {
           "role": ["speechBubble"],
-          "text": "But Pepper… Come back…"
+          "text": "But Pepper… Come back…",
+          "audioref": "audio/page1-panel2-bubble.mp3"
         }
       ]
     },
@@ -22,15 +29,20 @@
       "imgref": "page1.jpg#xywh=356,695,584,296",
       "role": ["panel"],
       "character": ["Pepper"],
-      "description": "Pepper frowns and looks angrily over her shoulder.",
+      "description": {
+        "audioref": "audio/page1-panel3-description.mp3",
+        "text": "Pepper frowns and looks angrily over her shoulder."
+      },
       "children": [
         {
           "role": ["shoutBubble"],
-          "text": "NO! I'M LEAVING!!"
+          "text": "NO! I'M LEAVING!!",
+          "audioref": "audio/page1-panel3-bubble1.mp3"
         },
         {
           "role": ["speechBubble"],
-          "text": "You don't teach real witchcraft! I'm going - to the witches of Ah!"
+          "text": "You don't teach real witchcraft! I'm going - to the witches of Ah!",
+          "audioref": "audio/page1-panel3-bubble2.mp3"
         }
       ]
     },
@@ -38,7 +50,10 @@
       "imgref": "page1.jpg#xywh=43,1022,907,308",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
-      "description": "Pepper and Carrot fly away from the house on Pepper's broom, making a woosh sound as it reaches dark clouds in the sky.",
+      "description": {
+        "audioref": "audio/page1-panel4-description.mp3",
+        "text": "Pepper and Carrot fly away from the house on Pepper's broom, making a woosh sound as it reaches dark clouds in the sky."
+      },
       "children": [
         {
           "role": ["sound"],
@@ -50,25 +65,33 @@
       "imgref": "page2.jpg.#xywh=58,16,878,305",
       "role": ["panel"],
       "character": ["Cayenne", "Cumin", "Thyme"],
-      "description": "Cumin looks away, while Cayenne and Thyme stare into the sky."
+      "description": {
+        "audioref": "audio/page2-panel1-description.mp3",
+        "text": "Cumin looks away, while Cayenne and Thyme stare into the sky."
+      }
     },
     {
       "imgref": "page2.jpg.#xywh=43,355,906,347",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
-      "description": "Surrounded by dark clouds, Pepper floats on her broom, turning back towards Carrot who's hanging from her backpack.",
+      "description": {
+        "audioref": "audio/page2-panel2-description.mp3",
+        "text": "Surrounded by dark clouds, Pepper floats on her broom, turning back towards Carrot who's hanging from her backpack."
+      },
       "children": [
         {
           "imgref": "page2.jpg#xywh=43,355,570,347",
           "role": ["speechBubble"],
           "character": ["Pepper"],
-          "text": "Alright then, off to the land of the setting moons. Shichimi can tell us how to join the witches of Ah."
+          "text": "Alright then, off to the land of the setting moons. Shichimi can tell us how to join the witches of Ah.",
+          "audioref": "audio/page2-panel2-bubble1.mp3"
         },
         {
           "imgref": "page2.jpg#xywh=340,355,600,347",
           "role": ["speechBubble"],
           "character": ["Pepper"],
-          "text": "Carrot, get out the map and compass: it's too cloudy to see where I'm going"
+          "text": "Carrot, get out the map and compass: it's too cloudy to see where I'm going",
+          "audioref": "audio/page2-panel2-bubble2.mp3"
         }
       ]
     },
@@ -76,18 +99,25 @@
       "imgref": "page2.jpg#xywh=44,736,294,594",
       "role": ["panel"],
       "character": ["Carrot"],
-      "description": "Mouth wide-opened, Carrot opens the backpack, grabs the map with his left paw and the compass with his right paw."
+      "description": {
+        "audioref": "audio/page2-panel3-description.mp3",
+        "text": "Mouth wide-opened, Carrot opens the backpack, grabs the map with his left paw and the compass with his right paw."
+      }
     },
     {
       "imgref": "page2.jpg#xywh=356,733,280,594",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
-      "description": "Pepper looses control over her broom and as they both dive down, the content of her backpack is lost in the sky.",
+      "description": {
+        "audioref": "audio/page2-panel4-description.mp3",
+        "text": "Pepper looses control over her broom and as they both dive down, the content of her backpack is lost in the sky."
+      },
       "children": [
         {
           "role": ["shoutBubble"],
           "character": ["Pepper"],
-          "text": "DRATS! Turbulence! HOLD ON!"
+          "text": "DRATS! Turbulence! HOLD ON!",
+          "audioref": "audio/page2-panel4-bubble.mp3"
         }
       ]
     },
@@ -95,7 +125,10 @@
       "imgref": "page2.jpg#xywh=655,736,294,594",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
-      "description": "A dark tornado lies in front of them, as thunder strikes mere meters away from the broom.",
+      "description": {
+        "audioref": "audio/page2-panel5-description.mp3",
+        "text": "A dark tornado lies in front of them, as thunder strikes mere meters away from the broom."
+      },
       "children": [
         {
           "role": ["sound"],
@@ -104,14 +137,18 @@
         {
           "role": ["shoutBubble"],
           "character": ["Pepper"],
-          "text": "Oh no!!!"
+          "text": "Oh no!!!",
+          "audioref": "audio/page2-panel5-bubble.mp3"
         }
       ]
     },
     {
       "imgref": "page3.jpg#xywh=46,16,904,266",
       "role": ["panel"],
-      "description": "They crash into a tropical forest, as the broom snaps in two above the treeline.",
+      "description": {
+        "audioref": "audio/page3-panel1-description.mp3",
+        "text": "They crash into a tropical forest, as the broom snaps in two above the treeline."
+      },
       "children": [
         {
           "role": ["sound"],
@@ -123,30 +160,43 @@
       "imgref": "page3.jpg#xywh=46,315,904,224",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
-      "description": "As they lay unconscious on a floor made of rocks covered with moss, Carrot dizziliy opens his eyes."
+      "description": {
+        "audioref": "audio/page3-panel2-description.mp3",
+        "text": "As they lay unconscious on a floor made of rocks covered with moss, Carrot dizziliy opens his eyes."
+      }
     },
     {
       "imgref": "page3.jpg#xywh=46,572,904,226",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
-      "description": "Shocked by this vision, Carrot wakes Pepper up who stares at something from the corner of her eyes."
+      "description": {
+        "audioref": "audio/page3-panel3-description.mp3",
+        "text": "Shocked by this vision, Carrot wakes Pepper up who stares at something from the corner of her eyes."
+      }
     },
     {
       "imgref": "page3.jpg#xywh=46,830,904,500",
       "role": ["panel"],
       "character": ["Pepper", "Carrot", "Monster"],
-      "description": "Now sitting on a floor filled with the bones of other living creatures, Pepper faces a monster who's clearly thinking about them as its next meal."
+      "description": {
+        "audioref": "audio/page3-panel4-description.mp3",
+        "text": "Now sitting on a floor filled with the bones of other living creatures, Pepper faces a monster who's clearly thinking about them as its next meal."
+      }
     },
     {
       "imgref": "page4.jpg#xywh=42,16,444,322",
       "role": ["panel"],
       "character": ["Pepper", "Monster"],
-      "description": "Pepper stares into the monster's eyes, mimicking Cayenne with a wheat straw in her hand.",
+      "description": {
+        "audioref": "audio/page4-panel1-description.mp3",
+        "text": "Pepper stares into the monster's eyes, mimicking Cayenne with a wheat straw in her hand."
+      },
       "children": [
         {
           "role": ["speechBubble"],
           "character": ["Pepper"],
-          "text": "Above all, don't panic, Carrot…"
+          "text": "Above all, don't panic, Carrot…",
+          "audioref": "audio/page4-panel1-bubble.mp3"
         }
       ]
     },
@@ -154,18 +204,25 @@
       "imgref": "page4.jpg#xywh=505,16,444,322",
       "role": ["panel"],
       "character": ["Monster"],
-      "description": "The monster stares back, no longer looking like much of a threat."
+      "description": {
+        "audioref": "audio/page4-panel2-description.mp3",
+        "text": "The monster stares back, no longer looking like much of a threat."
+      }
     },
     {
       "imgref": "page4.jpg#xywh=44,370,890,388",
-      "description": "Forehead to forehead, Pepper continues to stare into the monster's eyes as she quotes Cayenne. The monster sweats profusely under this threat.",
       "role": ["panel"],
       "character": ["Pepper", "Monster"],
+      "description": {
+        "audioref": "audio/page4-panel3-description.mp3",
+        "text": "Forehead to forehead, Pepper continues to stare into the monster's eyes as she quotes Cayenne. The monster sweats profusely under this threat."
+      },
       "children": [
         {
           "role": ["speechBubble"],
           "character": ["Pepper", "Cayenne"],
-          "text": "\"A good dark stare is worth a dozen useless curses! … Stare them down. Dominate them!\""
+          "text": "\"A good dark stare is worth a dozen useless curses! … Stare them down. Dominate them!\"",
+          "audioref": "audio/page4-panel3-bubble.mp3"
         }
       ]
     },
@@ -173,7 +230,10 @@
       "imgref": "page4.jpg#xywh=44,790,900,540",
       "role": ["panel"],
       "character": ["Pepper", "Carrot", "Monster"],
-      "description": "Scratching her head as she speaks, Pepper holds Carrot in her arms. In the background, the monster runs away while crying.",
+      "description": {
+        "audioref": "audio/page4-panel4-description.mp3",
+        "text": "Scratching her head as she speaks, Pepper holds Carrot in her arms. In the background, the monster runs away while crying."
+      },
       "children": [
         {
           "role": ["sound"],
@@ -184,25 +244,33 @@
           "imgref": "page4.jpg#xywh=246,794,512,348",
           "role": ["speechBubble"],
           "character": ["Pepper"],
-          "text": "Personally, I would've preferred to learn a few good attack spells; but anyway…"
+          "text": "Personally, I would've preferred to learn a few good attack spells; but anyway…",
+          "audioref": "audio/page4-panel4-bubble1.mp3"
         },
         {
           "imgref": "page4.jpg#xywh=546,874,400,414",
           "role": ["speechBubble"],
           "character": ["Pepper"],
-          "text": "shoot… no more broom or equipment, this is going to be a long trip…"
+          "text": "shoot… no more broom or equipment, this is going to be a long trip…",
+          "audioref": "audio/page4-panel4-bubble2.mp3"
         }
       ]
     },
     {
       "imgref": "page5.jpg#xywh=42,14,908,290",
       "role": ["panel"],
-      "description": "The desert stretches across the horizon. From this perspective, Pepper and Carrot look like two small figures. The land is mostly barren, but a few plants are visible across the dunes."
+      "description": {
+        "audioref": "audio/page5-panel1-description.mp3",
+        "text": "The desert stretches across the horizon. From this perspective, Pepper and Carrot look like two small figures. The land is mostly barren, but a few plants are visible across the dunes."
+      }
     },
     {
       "imgref": "page5.jpg#xywh=45,336,455,510",
       "role": ["panel"],
-      "description": "Carrot holds his paws on his belly, as his empty stomach makes a sound. Pepper wipes the sweat from her forehead as she leans on a large stick.",
+      "description": {
+        "audioref": "audio/page5-panel2-description.mp3",
+        "text": "Carrot holds his paws on his belly, as his empty stomach makes a sound. Pepper wipes the sweat from her forehead as she leans on a large stick."
+      },
       "children": [
         {
           "role": ["sound"],
@@ -212,7 +280,8 @@
         {
           "role": ["speechBubble"],
           "character": ["Pepper"],
-          "text": "I'm totally worn out too Carrot… And it's been days since we've eaten anything."
+          "text": "I'm totally worn out too Carrot… And it's been days since we've eaten anything.",
+          "audioref": "audio/page5-panel2-bubble.mp3"
         }
       ]
     },
@@ -220,12 +289,16 @@
       "imgref": "page5.jpg#xywh=520,336,430,510",
       "role": ["panel"],
       "character": ["Pepper"],
-      "description": "Staring at a plant that looks like a giant radish, Pepper makes her best impression of Cumin.",
+      "description": {
+        "audioref": "audio/page5-panel3-description.mp3",
+        "text": "Staring at a plant that looks like a giant radish, Pepper makes her best impression of Cumin."
+      },
       "children": [
         {
           "role": ["speechBubble"],
           "character": ["Pepper", "Cumin"],
-          "text": "\"To know the edible plants is to know where to find ready-made potions against hunger!\""
+          "text": "\"To know the edible plants is to know where to find ready-made potions against hunger!\"",
+          "audioref": "audio/page5-panel3-bubble.mp3"
         }
       ]
     },
@@ -233,12 +306,16 @@
       "imgref": "page5.jpg#xywh=164,916,706,414",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
-      "description": "Sitting on the floor, Pepper and Carrot are both eating these giant radishes, looking hardly impressed by their meal.",
+      "description": {
+        "audioref": "audio/page5-panel4-description.mp3",
+        "text": "Sitting on the floor, Pepper and Carrot are both eating these giant radishes, looking hardly impressed by their meal."
+      },
       "children": [
         {
           "role": ["speechBubble"],
           "character": ["Pepper"],
-          "text": "But real potions?… If only she had taught me a single one!"
+          "text": "But real potions?… If only she had taught me a single one!",
+          "audioref": "audio/page5-panel4-bubble.mp3"
         }
       ]
     },
@@ -246,65 +323,87 @@
       "imgref": "page6.jpg#xywh=84,30,840,402",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
-      "description": "In a different land, Pepper and Carrot arrive at a crossroad in the middle of the night. With eight different potential directions, Pepper points towards one of them."
+      "description": {
+        "audioref": "audio/page6-panel1-description.mp3",
+        "text": "In a different land, Pepper and Carrot arrive at a crossroad in the middle of the night. With eight different potential directions, Pepper points towards one of them."
+      }
     },
     {
       "imgref": "page6.jpg#xywh=44,490,228,392",
       "role": ["panel"],
       "character": ["Pepper"],
-      "description": "Pepper stares into a brightly lit sky full of stars."
+      "description": {
+        "audioref": "audio/page6-panel2-description.mp3",
+        "text": "Pepper stares into a brightly lit sky full of stars."
+      }
     },
     {
       "imgref": "page6.jpg#xywh=294,490,642,392",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
-      "description": "Pepper and Carrot are both holding walking sticks. From the look of Pepper's hair and clothes, the toil of their trip can be seen. Pepper makes her best impression of something that Thyme would typically say.",
+      "description": {
+        "audioref": "audio/page6-panel3-description.mp3",
+        "text": "Pepper and Carrot are both holding walking sticks. From the look of Pepper's hair and clothes, the toil of their trip can be seen. Pepper makes her best impression of something that Thyme would typically say."
+      },
       "children": [
         {
           "role": ["speechBubble"],
           "character": ["Pepper", "Thyme"],
-          "text": "\"A true witch of Chaosah needs neither compass nor map. A starry sky will suffice\""
+          "text": "\"A true witch of Chaosah needs neither compass nor map. A starry sky will suffice\"",
+          "audioref": "audio/page6-panel3-bubble1.mp3"
         },
         {
           "role": ["speechBubble"],
           "character": ["Pepper"],
-          "text": "… I would've preferred a real course in divination!"
+          "text": "… I would've preferred a real course in divination!",
+          "audioref": "audio/page6-panel3-bubble2.mp3"
         }
       ]
     },
     {
       "imgref": "page6.jpg#xywh=44,912,400,416",
       "character": ["Pepper", "Carrot"],
-      "description": "In a land where three moons can be seen in the sky, Pepper drops her walking stick and points excitedly in front of her, waving hello with her other hand.",
+      "description": {
+        "audioref": "audio/page6-panel4-description1.mp3",
+        "text": "In a land where three moons can be seen in the sky, Pepper drops her walking stick and points excitedly in front of her, waving hello with her other hand."
+      },
       "children": [
         {
           "role": ["speechBubble"],
           "character": ["Pepper"],
-          "text": "Cheer up Carrot! Look, we've arrived!"
+          "text": "Cheer up Carrot! Look, we've arrived!",
+          "audioref": "audio/page6-panel4-bubble.mp3"
         }
       ]
     },
     {
       "imgref": "page6.jpg#xywh=44,912,906,416",
-      "role": ["panel"],
       "character": ["Pepper", "Carrot", "Shichimi", "Two-tailed fox companion"],
-      "description": "Shichimi waves back with both hands. In the background, we can see temples half hanging in the sky, with waterfalls dropping from these pieces of land."
+      "description": {
+        "audioref": "audio/page6-panel4-description2.mp3",
+        "text": "Shichimi waves back with both hands. In the background, we can see temples half hanging in the sky, with waterfalls dropping from these pieces of land."
+      }
     },
     {
       "imgref": "page7.jpg#xywh=40,15,914,422",
       "role": ["panel"],
       "character": ["Pepper", "Carrot", "Shichimi", "Two-tailed fox companion"],
-      "description": "Pepper, Shichimi and their companions are all sitting in the grass, enjoying a cup of hot tea while chatting.",
+      "description": {
+        "audioref": "audio/page7-panel1-description.mp3",
+        "text": "Pepper, Shichimi and their companions are all sitting in the grass, enjoying a cup of hot tea while chatting."
+      },
       "children": [
         {
           "role": ["speechBubble"],
           "character": ["Pepper"],
-          "text": "… so there you are. Now you know the whole story."
+          "text": "… so there you are. Now you know the whole story.",
+          "audioref": "audio/page7-panel1-bubble1.mp3"
         },
         {
           "role": ["speechBubble"],
           "character": ["Shichimi"],
-          "text": "… and you tell me that you're here because they haven't taught you anything?"
+          "text": "… and you tell me that you're here because they haven't taught you anything?",
+          "audioref": "audio/page7-panel1-bubble2.mp3"
         }
       ]
     },
@@ -312,13 +411,19 @@
       "imgref": "page7.jpg#xywh=256,450,540,210",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
-      "description": "Pepper and Carrot look back in astonishment, suddenly realizing that they couldn't have accomplished what they did without the lessons learned in Chaosah."
+      "description": {
+        "audioref": "audio/page7-panel2-description.mp3",
+        "text": "Pepper and Carrot look back in astonishment, suddenly realizing that they couldn't have accomplished what they did without the lessons learned in Chaosah."
+      }
     },
     {
       "imgref": "page7.jpg#xywh=42,692,886,638",
       "role": ["panel"],
       "character": ["Pepper", "Carrot", "Cayenne", "Cumin", "Thyme"],
-      "description": "Back in Chaosah, Pepper and Carrot hug all three witches on the front porch of their house. A happy ending for everyone, especially the three witches who can barely contain their surprise."
+      "description": {
+        "audioref": "audio/page7-panel3-description.mp3",
+        "text": "Back in Chaosah, Pepper and Carrot hug all three witches on the front porch of their house. A happy ending for everyone, especially the three witches who can barely contain their surprise."
+      }
     }
   ]
 }
