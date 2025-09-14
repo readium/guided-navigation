@@ -27,16 +27,20 @@
       "accessMode": [
         "visual",
         "textual",
-        "textOnVisual"
+        "textOnVisual",
+        "auditory"
       ],
       "accessModeSufficient": [
-        ["visual", "textual"],
-        "textual"
+        "visual",
+        "textual",
+        "auditory"
       ],
       "feature": [
         "alternativeText", 
+        "audioDescription",
         "displayTransformability", 
-        "readingOrder"
+        "readingOrder",
+        "transcript"
       ],
       "hazard": ["none"]
     }
@@ -146,6 +150,200 @@
       "type": "image/jpeg",
       "width": "992",
       "height": "1772"
+    }
+  ],
+  "resources": [
+    {
+      "href": "audio/page1-panel1-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page1-panel2-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page1-panel2-bubble.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page1-panel3-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page1-panel3-bubble1.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page1-panel3-bubble2.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page1-panel4-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page2-panel1-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page2-panel2-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page2-panel2-bubble1.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page2-panel2-bubble2.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page2-panel3-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page2-panel4-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page2-panel4-bubble.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page2-panel5-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page2-panel5-bubble.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page3-panel1-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page3-panel2-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page3-panel3-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page3-panel4-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page4-panel1-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page4-panel1-bubble.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page4-panel2-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page4-panel3-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page4-panel3-bubble.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page4-panel4-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page4-panel4-bubble1.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page4-panel4-bubble2.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page5-panel1-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page5-panel2-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page5-panel2-bubble.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page5-panel3-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page5-panel3-bubble.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page5-panel4-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page5-panel4-bubble.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page6-panel1-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page6-panel2-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page6-panel3-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page6-panel3-bubble1.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page6-panel3-bubble2.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page6-panel4-description1.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page6-panel4-bubble.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page6-panel4-description2.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page7-panel1-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page7-panel1-bubble1.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page7-panel1-bubble2.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page7-panel2-description.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "audio/page7-panel3-description.mp3",
+      "type": "audio/mpeg"
     }
   ]
 }
