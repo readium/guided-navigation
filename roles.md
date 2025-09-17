@@ -8,6 +8,7 @@
 | `aside` | [`aside`](https://www.w3.org/TR/epub-ssv-11/#sec-asides) | | `<aside>` | Secondary or supplementary content. |
 | `audio` | | | `<audio>` | Embedded sound content in a document. |
 | `blockquote` | | | `<blockquote>` | Represents a section that is quoted from another source. |
+| `body` | | | `<body>` | Represents the content of an HTML document. |
 | `caption` | | | `<caption>` or `<figcaption>` | A caption for an image or a table. |
 | `cell` | [`table-cell`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) |  `cell` | `<td>` | A single cell of tabular data or content. |
 | `columnheader` |  |  `columnheader` | `<th>` with scope `col` | The header cell for a column, establishing a relationship between it and the other cells in the same column. |
@@ -20,7 +21,7 @@
 | `image` | | `img` | `<img>` | Represents an image. |
 | `list` | [`list`](https://www.w3.org/TR/epub-ssv-11/#sec-lists) | `list` | `<ul>` or `<ol>` | A structure that contains an enumeration of related content items. |
 | `listItem` | [`list-item`](https://www.w3.org/TR/epub-ssv-11/#sec-lists)  | `listitem`| `<li>` |  A single item in an enumeration. |
-| `main` | | `main` | | Content that is directly related to or expands upon the central topic of the document. |
+| `main` | | `main` | `<main>` | Content that is directly related to or expands upon the central topic of the document. |
 | `math` | | `math` | `<math>` | Content that represents a mathematical expression. |
 | `navigation` | | `navigation` | `<nav>` | Represents a section of a page that links to other pages or to parts within the page: a section with navigation links. |
 | `paragraph` | | | `<p>` | Represents a paragraph. |
