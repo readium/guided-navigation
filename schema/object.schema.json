@@ -4,6 +4,9 @@
   "title": "Readium Guided Navigation Object",
   "type": "object",
   "properties": {
+    "id": {
+      "type": "string"
+    },
     "audioref": {
       "type": "string",
       "format": "uri-reference"
@@ -13,6 +16,10 @@
       "format": "uri-reference"
     },
     "textref": {
+      "type": "string",
+      "format": "uri-reference"
+    },
+    "videoref": {
       "type": "string",
       "format": "uri-reference"
     },
@@ -63,6 +70,9 @@
     },
     {
       "required": ["textref"]
+    },
+    {
+      "required": ["videoref"]
     },
     {
       "required": ["text"]
