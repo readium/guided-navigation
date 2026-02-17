@@ -19,8 +19,7 @@
   "role": ["section", "chapter"],
   "children": [
     {
-      "role": ["heading"],
-      "level": 1,
+      "role": ["heading1"],
       "text": "Title of the chapter"
     }
   ]

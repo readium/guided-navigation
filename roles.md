@@ -17,7 +17,12 @@
 | `details` | | | `<details>` | A disclosure widget that can be expanded. |
 | `figure` | [`figure`](https://www.w3.org/TR/epub-ssv-11/#sec-figures) | `figure` | `<figure>` | An illustration, diagram, photo, code listing or similar, referenced from the text of a work, and typically annotated with a title, caption and/or credits. |
 | `header` | | | `<header>` | Represents introductory content, typically a group of introductory or navigational aids. |
-| `heading` | | `heading` | `<h1>` through `<h6>` | A heading for a section of the page. |
+| `heading1` | | `heading` with `aria-level` set to 1 | `<h1>` | A heading for a section of the page. |
+| `heading2` | | `heading` with `aria-level` set to 2 | `<h2>` | A heading for a section of the page. |
+| `heading3` | | `heading` with `aria-level` set to 3 | `<h3>` | A heading for a section of the page. |
+| `heading4` | | `heading` with `aria-level` set to 4 | `<h4>` | A heading for a section of the page. |
+| `heading5` | | `heading` with `aria-level` set to 5 | `<h5>` | A heading for a section of the page. |
+| `heading6` | | `heading` with `aria-level` set to 6 | `<h6>` | A heading for a section of the page. |
 | `image` | | `img` | `<img>` | Represents an image. |
 | `list` | [`list`](https://www.w3.org/TR/epub-ssv-11/#sec-lists) | `list` | `<ul>` or `<ol>` | A structure that contains an enumeration of related content items. |
 | `listItem` | [`list-item`](https://www.w3.org/TR/epub-ssv-11/#sec-lists)  | `listitem`| `<li>` |  A single item in an enumeration. |
