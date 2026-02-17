@@ -14,6 +14,7 @@
     "bibliography",
     "biblioref",
     "blockquote",
+    "body",
     "caption",
     "chapter",
     "cell",
@@ -75,6 +76,7 @@
     "table",
     "term",
     "tip",
-    "toc"
+    "toc",
+    "video"
   ]
 }
