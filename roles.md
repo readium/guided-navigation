@@ -87,11 +87,16 @@
 
 | Role | EPUB type equivalent | Definition |
 | ---- | -------------------- | ---------- |
+| `bubble` | [`balloon`](https://www.w3.org/TR/epub-ssv-11/#sec-comics) | An area in a comic panel that contains the words, spoken or thought, of a character. |
+| `foreword` | [`foreword`](https://www.w3.org/TR/epub-ssv-11/#sec-sections) | An introductory section that precedes the work, typically not written by the author of the work. |
 | `landmarks` | [`landmarks`](https://w3c.github.io/epub-specs/epub33/ssv/#sec-navigation) | A short summary of the principle ideas, concepts and conclusions of the work, or of a section or excerpt within it. |
 | `loa` | [`loa`](https://w3c.github.io/epub-specs/epub33/ssv/#sec-navigation) | A listing of audio clips included in the work. |
 | `loi` | [`loi`](https://w3c.github.io/epub-specs/epub33/ssv/#sec-navigation) | A listing of illustrations included in the work. |
 | `lot` | [`lot`](https://w3c.github.io/epub-specs/epub33/ssv/#sec-navigation) | A listing of tables included in the work. |
 | `lov` | [`lov`](https://w3c.github.io/epub-specs/epub33/ssv/#sec-navigation) | A listing of video clips included in the work. |
+| `panel` | [`panel`](https://www.w3.org/TR/epub-ssv-11/#sec-comics) | An individual frame, or drawing. |
+| `panelGroup` | [`panel-group`](https://www.w3.org/TR/epub-ssv-11/#sec-comics) | A group of panels (e.g., a strip). |
+| `sound` | [`soundArea`](https://www.w3.org/TR/epub-ssv-11/#sec-comics) | An area of text in a comic panel that represents a sound. |
 
 ## List of skippable roles
 
