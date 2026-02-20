@@ -20,54 +20,36 @@ This document defines a syntax for Guided Navigation Documents, serialized in JS
 * Panel by panel navigation in comics/manga to facilitate reading on smaller screens.
 * Providing a textual transcript and/or image descriptions for highly illustrated publications such as [Divina](https://readium.org/webpub-manifest/profiles/divina).
 
-## 1. Guided Navigation Documents
+## 1. Guided Navigation Document
 
-Guided Navigation Documents <strong class="rfc">must</strong> be identified using the following media type: `application/guided-navigation+json`.
+A Guided Navigation Document <strong class="rfc">must</strong> be identified using the following media type: `application/guided-navigation+json`.
 
-### 1.1. Top-level properties
+### 1.1. `guided` property
 
 | Name | Description | Format | Required? |
 | ---- | ----------- | ------ | ---------- |
-| `links` | References to other resources that are related to the current Guided Navigation Document. | An array of [Link Objects](https://readium.org/webpub-manifest/#24-the-link-object) | No |
 | `guided` | A sequence of resources and/or media fragments into these resources, meant to be presented sequentially to the user. | An array of [Guided Navigation Objects](#12-guided-navigation-object) | Yes |
 
-*Example 1: A link to a subsequent Guided Navigation Document*
-
-```json
-{
-  "links": [
-    {
-      "rel": "next",
-      "href": "guided-chapter2.json"
-    }
-  ],
-  "guided": [
-    {
-      "textref": "chapter1.html",
-      "role": ["chapter"]
-    }
-  ]
-}
-```
 
 ### 1.2. Guided Navigation Object
 
 Each Guided Navigation Object <strong class="rfc">must</strong> either contain:
 
 - a `children` object containg at least one Guided Navigation Object
-- or one or more of the following properties: `audioref`, `imgref` or `textref`
+- or one or more of the following properties: `audioref`, `imgref` `text`, `textref` or `videoref`
 
 Guided Navigations Objects <strong class="rfc">should</strong> include one or more values for `role`.
 
 
 | Name | Description | Format |
 | ---- | ----------- | ------ |
-| `audioref` | References an audio resource or a fragment of it. | URI |
-| `children` | Items that are children of the containing Guided Navigation Object. | Guided Navigation Objects |
-| `imgref` | References an image or a fragment of it. | URI |
 | `role`     | Convey the structural semantics of a publication | Array of [roles](#4-roles) |
+| `audioref` | References an audio resource or a fragment of it. | URI reference |
+| `imgref` | References an image or a fragment of it. | URI reference |
 | `text`  | Textual equivalent of the resources or fragment of the resources referenced by the current Guided Navigation Object. | String or Text Object |
-| `textref`  | References a textual resource or a fragment of it. | URI |
+| `textref`  | References a textual resource or a fragment of it. | URI reference |
+| `videoref`  | References a video resource or a fragment of it. | URI reference |
+| `children` | Items that are children of the containing Guided Navigation Object. | Guided Navigation Objects |
 
 
 ## 2. Relationship to the Readium Web Publication Manifest
@@ -89,43 +71,11 @@ Publications that conform to the [EPUB profile](https://readium.org/webpub-manif
 
 Users <strong class="rfc">must</strong> be free to move in and out of a Guided Navigation experience at will. 
 
-To do so, publications <strong class="rfc">should</strong> provide references to Guided Navigation Documents both at a publication-level and as an alternate to resources referenced in the `readingOrder`.
-
-#### 2.2.1 Publication-level
-
-All valid [Readium Web Publication Manifests](https://readium.org/webpub-manifest) <strong class="rfc">must</strong> contain a `links` property with at least one reference to its canonical location.
-
-In order to indicate the presence of a Guided Navigation Document, `links` <strong class="rfc">may</strong> also include an additional Link Object where:
-
-- `type` uses the dedicated value for Guided Navigation Documents: `application/guided-navigation+json`
-- and the `rel` value simply indicates that the Guided Navigation Document is `related` to the publication
-
-Subsequent Guided Navigation Documents can be linked from this initial resource using the `links` property, in order to navigate throughout the publication.
-
-*Example 2: A publication links to a Guided Navigation Document*
-
-```json
-"links": [
-  {
-    "rel": "self",
-    "href": "https://example.com/manifest.json",
-    "type": "application/guided-navigation+json"
-  }
-  {
-    "rel": "related",
-    "href": "https://example.com/guided.json",
-    "type": "application/guided-navigation+json"
-  }
-]
-```
-
-#### 2.2.2 Link-level
-
-In addition to a publication-level link, all resources in the `readingOrder` <strong class="rfc">should</strong> also point to the Guided Navigation Document that references them using the `alternate` property.
+To do so, all resources in the `readingOrder` <strong class="rfc">must</strong> also point to the Guided Navigation Document that references them using the `alternate` property.
 
 If this Guided Navigation Document contains any `audioref` element, then the Link Object <strong class="rfc">should</strong> also indicate the total duration for all `audioref` properties using `duration`.
 
-*Example 3: An image in a Divina that links to a Guided Navigation Document as an alternative*
+*Example 2: An image in a Divina that links to a Guided Navigation Document as an alternative*
 
 ```json
 "readingOrder": [
@@ -144,30 +94,20 @@ If this Guided Navigation Document contains any `audioref` element, then the Lin
 
 ## 3. Roles
 
-> [!NOTE]
-> There are a number of open issues that relate to roles:
-> 
-> - Cherrypicking roles from EPUB 3 Structural Semantics Vocabulary 1.1: <https://github.com/readium/guided-navigation/discussions/2>
-> - Identifying skippable and escapable roles: <https://github.com/readium/guided-navigation/discussions/3>
-> - Defining a list of roles for Divina: <https://github.com/readium/guided-navigation/discussions/1>
-
 Roles are inherited from multiple specifications such as [HTML](https://html.spec.whatwg.org/), [ARIA](https://www.w3.org/TR/wai-aria-1.1/), [DPUB ARIA](https://www.w3.org/TR/dpub-aria-1.1/) and [EPUB 3 Semantics Vocabulary](https://www.w3.org/TR/epub-ssv-11/), in order to convey the structural semantics of a publication.
 
 The full list of supported roles is available at: <https://readium.org/guided-navigation/roles>
 
 Roles <strong class="rfc">should</strong> be used by reading applications to implement skippability (based on user preferences, some items could be skipped) and escapability (allowing users to escape from the current context, for example escaping from the content of a table to go back to the main text).
 
-## 4. Media References
+## 4. Media Fragments
 
 > [!NOTE]
-> The following media fragments have been identified as potential candidates for fragments in `audioref`, `imgref` and `textref`:
+> The following media fragments have been identified as potential candidates for fragments in `audioref`, `imgref`, `textref` and `videoref`:
 > 
 >**Audio**: <https://www.w3.org/TR/media-frags/#naming-time>
 >
->**Images:**
->
->  - Rectangular regions: <https://www.w3.org/TR/media-frags/#naming-space>
->  - Polygonal regions: <https://idpf.org/epub/renditions/region-nav/#sec-3.5.1>
+>**Images:** <https://www.w3.org/TR/media-frags/#naming-space>
 >
 >**Text:**
 >  
@@ -175,9 +115,7 @@ Roles <strong class="rfc">should</strong> be used by reading applications to imp
 > - Text fragments: <https://wicg.github.io/scroll-to-text-fragment/>
 > 
 > There are a number of open issues that relate to media fragments:
-> 
-> - Support for non-rectangular regions: <https://github.com/readium/guided-navigation/discussions/5>
-> - Support for CSS selectors and positions in `textref`: <https://github.com/readium/guided-navigation/discussions/6>
+
 
 ## 5. Text
 
@@ -188,7 +126,7 @@ Roles <strong class="rfc">should</strong> be used by reading applications to imp
 | `ssml` | Contains an SSML representation of the text. | SSML |
 
 
-*Example 4: Text representation with both plain text and SSML*
+*Example 3: Text representation with both plain text and SSML*
 
 ```json
 {
@@ -222,7 +160,7 @@ A few additional documents are available in order to illustrate how Guided Navig
 
 The following examples are also available to illustrate how other types of publication can be mapped to Guided Navigation:
 
-*Example 5: Synchronizing text with pre-recorded audio*
+*Example: Synchronizing text with pre-recorded audio*
 
 ```json
 {
@@ -245,7 +183,7 @@ The following examples are also available to illustrate how other types of publi
 }
 ```
 
-*Example 6: Accessible audiobook using text fragments*
+*Example: Accessible audiobook using text fragments*
 
 ```json
 {
@@ -262,7 +200,7 @@ The following examples are also available to illustrate how other types of publi
 }
 ```
 
-*Example 7: Accessible audiobook using embedded text*
+*Example: Accessible audiobook using embedded text*
 
 ```json
 {
@@ -287,7 +225,7 @@ The following examples are also available to illustrate how other types of publi
 | ---- | ----------- | ------ |
 | `description` | Text, audio or image description for the current Guided Navigation Object. | Guided Navigation Object without `children` |
 
-*Example 8: Audio and text description for an image*
+*Example: Audio and text description for an image*
 
 ```json
 {
@@ -323,7 +261,7 @@ The following examples are also available to illustrate how other types of publi
 | ---- | ----------- | ------ |
 | `multipleImages` | Two or more references to images or regions of different images. | Array of URI |
 
-*Example 9: Two page spread that contains a panel across the entire spread*
+*Example: Two page spread that contains a panel across the entire spread*
 
 ```json
 {
@@ -351,7 +289,7 @@ The following examples are also available to illustrate how other types of publi
 | ---- | ----------- | ------ |
 | `character` | Identifies one or more character present in a given Guided Navigation object. | Array of strings |
 
-*Example 10: Characters present in the panel of a comicbook*
+*Example: Characters present in the panel of a comicbook*
 
 ```json
 {
