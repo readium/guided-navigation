@@ -96,7 +96,7 @@
 | `lov` | [`lov`](https://w3c.github.io/epub-specs/epub33/ssv/#sec-navigation) | A listing of video clips included in the work. |
 | `panel` | [`panel`](https://www.w3.org/TR/epub-ssv-11/#sec-comics) | An individual frame, or drawing. |
 | `panelGroup` | [`panel-group`](https://www.w3.org/TR/epub-ssv-11/#sec-comics) | A group of panels (e.g., a strip). |
-| `sound` | [`soundArea`](https://www.w3.org/TR/epub-ssv-11/#sec-comics) | An area of text in a comic panel that represents a sound. |
+| `sound` | [`sound-area`](https://www.w3.org/TR/epub-ssv-11/#sec-comics) | An area of text in a comic panel that represents a sound. |
 
 ## List of skippable roles
 
@@ -127,6 +127,10 @@
   * `caption` 
 * `list`
   * `listItem` 	
+* `panelGroup`
+  * `panel`
+    * `bubble`
+    * `sound`
 * `table`
   * `columnheader`
   * `rowheader`
