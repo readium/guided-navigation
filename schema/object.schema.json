@@ -6,7 +6,7 @@
   "properties": {
     "id": {
       "type": "string"
-    }
+    },
     "audioref": {
       "type": "string",
       "format": "uri-reference"

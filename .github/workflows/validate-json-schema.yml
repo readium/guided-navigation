@@ -4,13 +4,9 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "schema/**/*.schema.json"
   pull_request:
     branches:
       - main
-    paths:
-      - "schema/**/*.schema.json"
   workflow_dispatch:
 
 jobs:
