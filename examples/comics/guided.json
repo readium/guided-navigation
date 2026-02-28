@@ -1,7 +1,7 @@
 {
   "guided": [
     {
-      "imgref": "page1.jpg#xywh=76,19,814,635",
+      "imgref": "page1.jpg#xywh=41,41,918,445",
       "role": ["panel"],
       "character": ["Pepper", "Carrot", "Cayenne", "Cumin", "Thyme"],
       "description": {
@@ -10,7 +10,7 @@
       }
     },
     {
-      "imgref": "page1.jpg#xywh=42,694,296,297",
+      "imgref": "page1.jpg#xywh=41,503,300,215",
       "role": ["panel"],
       "character": ["Cumin"],
       "description": {
@@ -26,7 +26,7 @@
       ]
     },
     {
-      "imgref": "page1.jpg#xywh=356,695,584,296",
+      "imgref": "page1.jpg#xywh=355,503,604,215",
       "role": ["panel"],
       "character": ["Pepper"],
       "description": {
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "imgref": "page1.jpg#xywh=43,1022,907,308",
+      "imgref": "page1.jpg#xywh=41,735,918,224",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
       "description": {
@@ -62,7 +62,7 @@
       ]
     },
     {
-      "imgref": "page2.jpg.#xywh=58,16,878,305",
+      "imgref": "page2.jpg.#xywh=41,41,918,194",
       "role": ["panel"],
       "character": ["Cayenne", "Cumin", "Thyme"],
       "description": {
@@ -71,7 +71,7 @@
       }
     },
     {
-      "imgref": "page2.jpg.#xywh=43,355,906,347",
+      "imgref": "page2.jpg.#xywh=41,252,918,260",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
       "description": {
@@ -80,14 +80,14 @@
       },
       "children": [
         {
-          "imgref": "page2.jpg#xywh=43,355,570,347",
+          "imgref": "page2.jpg#xywh=41,252,459,260",
           "role": ["speechBubble"],
           "character": ["Pepper"],
           "text": "Alright then, off to the land of the setting moons. Shichimi can tell us how to join the witches of Ah.",
           "audioref": "audio/page2-panel2-bubble1.mp3"
         },
         {
-          "imgref": "page2.jpg#xywh=340,355,600,347",
+          "imgref": "page2.jpg#xywh=500,252,459,260",
           "role": ["speechBubble"],
           "character": ["Pepper"],
           "text": "Carrot, get out the map and compass: it's too cloudy to see where I'm going",
@@ -96,7 +96,7 @@
       ]
     },
     {
-      "imgref": "page2.jpg#xywh=44,736,294,594",
+      "imgref": "page2.jpg#xywh=41,529,301,442",
       "role": ["panel"],
       "character": ["Carrot"],
       "description": {
@@ -105,7 +105,7 @@
       }
     },
     {
-      "imgref": "page2.jpg#xywh=356,733,280,594",
+      "imgref": "page2.jpg#xywh=357,529,287,442",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
       "description": {
@@ -122,7 +122,7 @@
       ]
     },
     {
-      "imgref": "page2.jpg#xywh=655,736,294,594",
+      "imgref": "page2.jpg#xywh=658,529,301,442",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
       "description": {
@@ -143,7 +143,7 @@
       ]
     },
     {
-      "imgref": "page3.jpg#xywh=46,16,904,266",
+      "imgref": "page3.jpg#xywh=41,41,918,153",
       "role": ["panel"],
       "description": {
         "audioref": "audio/page3-panel1-description.mp3",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "imgref": "page3.jpg#xywh=46,315,904,224",
+      "imgref": "page3.jpg#xywh=41,211,918,170",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
       "description": {
@@ -166,7 +166,7 @@
       }
     },
     {
-      "imgref": "page3.jpg#xywh=46,572,904,226",
+      "imgref": "page3.jpg#xywh=41,398,918,170",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
       "description": {
@@ -175,7 +175,7 @@
       }
     },
     {
-      "imgref": "page3.jpg#xywh=46,830,904,500",
+      "imgref": "page3.jpg#xywh=41,585,918,386",
       "role": ["panel"],
       "character": ["Pepper", "Carrot", "Monster"],
       "description": {
@@ -184,7 +184,7 @@
       }
     },
     {
-      "imgref": "page4.jpg#xywh=42,16,444,322",
+      "imgref": "page4.jpg#xywh=41,41,452,209",
       "role": ["panel"],
       "character": ["Pepper", "Monster"],
       "description": {
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "imgref": "page4.jpg#xywh=505,16,444,322",
+      "imgref": "page4.jpg#xywh=508,41,451,209",
       "role": ["panel"],
       "character": ["Monster"],
       "description": {
@@ -210,7 +210,7 @@
       }
     },
     {
-      "imgref": "page4.jpg#xywh=44,370,890,388",
+      "imgref": "page4.jpg#xywh=41,265,918,285",
       "role": ["panel"],
       "character": ["Pepper", "Monster"],
       "description": {
@@ -227,7 +227,7 @@
       ]
     },
     {
-      "imgref": "page4.jpg#xywh=44,790,900,540",
+      "imgref": "page4.jpg#xywh=41,565,918,406",
       "role": ["panel"],
       "character": ["Pepper", "Carrot", "Monster"],
       "description": {
@@ -241,14 +241,12 @@
           "text": "Wah!! Aah!!"
         },
         {
-          "imgref": "page4.jpg#xywh=246,794,512,348",
           "role": ["speechBubble"],
           "character": ["Pepper"],
           "text": "Personally, I would've preferred to learn a few good attack spells; but anyway…",
           "audioref": "audio/page4-panel4-bubble1.mp3"
         },
         {
-          "imgref": "page4.jpg#xywh=546,874,400,414",
           "role": ["speechBubble"],
           "character": ["Pepper"],
           "text": "shoot… no more broom or equipment, this is going to be a long trip…",
@@ -257,7 +255,7 @@
       ]
     },
     {
-      "imgref": "page5.jpg#xywh=42,14,908,290",
+      "imgref": "page5.jpg#xywh=41,41,918,185",
       "role": ["panel"],
       "description": {
         "audioref": "audio/page5-panel1-description.mp3",
@@ -265,7 +263,7 @@
       }
     },
     {
-      "imgref": "page5.jpg#xywh=45,336,455,510",
+      "imgref": "page5.jpg#xywh=41,244,459,380",
       "role": ["panel"],
       "description": {
         "audioref": "audio/page5-panel2-description.mp3",
@@ -286,7 +284,7 @@
       ]
     },
     {
-      "imgref": "page5.jpg#xywh=520,336,430,510",
+      "imgref": "page5.jpg#xywh=518,244,441,380",
       "role": ["panel"],
       "character": ["Pepper"],
       "description": {
@@ -303,7 +301,7 @@
       ]
     },
     {
-      "imgref": "page5.jpg#xywh=164,916,706,414",
+      "imgref": "page5.jpg#xywh=41,643,918,316",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
       "description": {
@@ -329,7 +327,7 @@
       }
     },
     {
-      "imgref": "page6.jpg#xywh=44,490,228,392",
+      "imgref": "page6.jpg#xywh=41,41,918,295",
       "role": ["panel"],
       "character": ["Pepper"],
       "description": {
@@ -338,7 +336,7 @@
       }
     },
     {
-      "imgref": "page6.jpg#xywh=294,490,642,392",
+      "imgref": "page6.jpg#xywh=41,356,230,290",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
       "description": {
@@ -361,7 +359,7 @@
       ]
     },
     {
-      "imgref": "page6.jpg#xywh=44,912,400,416",
+      "imgref": "page6.jpg#xywh=41,666,459,293",
       "character": ["Pepper", "Carrot"],
       "description": {
         "audioref": "audio/page6-panel4-description1.mp3",
@@ -377,7 +375,7 @@
       ]
     },
     {
-      "imgref": "page6.jpg#xywh=44,912,906,416",
+      "imgref": "page6.jpg#xywh=41,666,918,293",
       "character": ["Pepper", "Carrot", "Shichimi", "Two-tailed fox companion"],
       "description": {
         "audioref": "audio/page6-panel4-description2.mp3",
@@ -385,7 +383,7 @@
       }
     },
     {
-      "imgref": "page7.jpg#xywh=40,15,914,422",
+      "imgref": "page7.jpg#xywh=41,41,918,280",
       "role": ["panel"],
       "character": ["Pepper", "Carrot", "Shichimi", "Two-tailed fox companion"],
       "description": {
@@ -408,7 +406,7 @@
       ]
     },
     {
-      "imgref": "page7.jpg#xywh=256,450,540,210",
+      "imgref": "page7.jpg#xywh=140,335,720,155",
       "role": ["panel"],
       "character": ["Pepper", "Carrot"],
       "description": {
@@ -417,7 +415,7 @@
       }
     },
     {
-      "imgref": "page7.jpg#xywh=42,692,886,638",
+      "imgref": "page7.jpg#xywh=41,505,918,455",
       "role": ["panel"],
       "character": ["Pepper", "Carrot", "Cayenne", "Cumin", "Thyme"],
       "description": {
