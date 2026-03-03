@@ -84,6 +84,8 @@
     "summary",
     "table",
     "term",
+    "textRangeSmall",
+    "textRangeLarge",
     "tip",
     "toc",
     "video"

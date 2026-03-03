@@ -97,6 +97,8 @@
 | `panel` | [`panel`](https://www.w3.org/TR/epub-ssv-11/#sec-comics) | An individual frame, or drawing. |
 | `panelGroup` | [`panel-group`](https://www.w3.org/TR/epub-ssv-11/#sec-comics) | A group of panels (e.g., a strip). |
 | `sound` | [`sound-area`](https://www.w3.org/TR/epub-ssv-11/#sec-comics) | An area of text in a comic panel that represents a sound. |
+| `textRangeSmall` | [`text-range-small`](https://github.com/w3c/epub-specs/issues/2917) | |
+| `textRangeLarge` | [`text-range-large`](https://github.com/w3c/epub-specs/issues/2917) | |
 
 ## List of skippable roles
 
