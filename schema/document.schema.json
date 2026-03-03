@@ -4,21 +4,81 @@
   "title": "Readium Guided Navigation Document",
   "type": "object",
   "properties": {
-    "links": {
-      "type": "array",
-      "items": {
-        "$ref": "https://readium.org/webpub-manifest/schema/link.schema.json"
-      },
-    },
     "guided": {
       "type": "array",
       "items": {
-        "$ref": "object.schema.json"
+        "$ref": "#/$defs/object"
       },
       "minItems": 1
     }
   },
   "required": [
     "guided"
-  ]
+  ],
+  "$defs": {
+    "object": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "audioref": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "imgref": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "textref": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "videoref": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "text": {
+          "$ref": "text.schema.json"
+        },
+        "role": {
+          "type": ["array"],
+          "items": {
+            "type": "string",
+            "$ref": "roles.schema.json"
+          }
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "object.schema.json"
+          },
+          "minItems": 1
+        },
+        "description" : {
+          "$ref": "description.schema.json"
+        }
+      },
+      "anyOf": [
+        {
+          "required": ["audioref"]
+        },
+        {
+          "required": ["imgref"]
+        },
+        {
+          "required": ["textref"]
+        },
+        {
+          "required": ["videoref"]
+        },
+        {
+          "required": ["text"]
+        },
+        {
+          "required": ["children"]
+        }
+      ]
+    }
+  }
 }
