@@ -50,6 +50,8 @@ Guided Navigations Objects <strong class="rfc">should</strong> include one or mo
 | `textref`  | References a textual resource or a fragment of it. | URI reference |
 | `videoref`  | References a video resource or a fragment of it. | URI reference |
 | `children` | Items that are children of the containing Guided Navigation Object. | Guided Navigation Objects |
+| `colspan` | Number of columns spanned by a `cell`, `columnheader` or `rowheader`, mirroring HTML's `colspan` attribute. Defaults to 1 and must not be present on any other role. | Integer (≥ 1) |
+| `rowspan` | Number of rows spanned by a `cell`, `columnheader` or `rowheader`, mirroring HTML's `rowspan` attribute. Defaults to 1 and must not be present on any other role. | Integer (≥ 1) |
 
 
 ## 2. Relationship to the Readium Web Publication Manifest

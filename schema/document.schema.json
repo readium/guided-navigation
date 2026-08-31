@@ -57,6 +57,14 @@
         },
         "description" : {
           "$ref": "description.schema.json"
+        },
+        "colspan": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "rowspan": {
+          "type": "integer",
+          "minimum": 1
         }
       },
       "anyOf": [
@@ -77,6 +85,27 @@
         },
         {
           "required": ["children"]
+        }
+      ],
+      "allOf": [
+        {
+          "$comment": "colspan/rowspan are only meaningful on cell, columnheader, or rowheader roles",
+          "if": {
+            "required": ["role"],
+            "properties": {
+              "role": {
+                "type": "array",
+                "contains": { "enum": ["cell", "columnheader", "rowheader"] }
+              }
+            }
+          },
+          "then": true,
+          "else": {
+            "allOf": [
+              { "not": { "required": ["colspan"] } },
+              { "not": { "required": ["rowspan"] } }
+            ]
+          }
         }
       ]
     }

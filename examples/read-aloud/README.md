@@ -166,7 +166,7 @@
         "plain": "And the next pagebreak is in the middle  of a sentence.", 
         "ssml": "And the next pagebreak is in the middle <readium:pagebreak id=\"page5\" /> of a sentence.",
         "language": "en"
-      }
+      },
       "children": [
         {
           "role": ["pagebreak"],
@@ -304,3 +304,167 @@
 
 * This text has a footnote in the same resource and an endnote.
 * This is a paragraph without a footnote.
+
+## Tables
+
+### HTML
+
+```html
+<table>
+  <caption>Council budget (in £) 2018</caption>
+  <thead>
+    <tr>
+      <th scope="col">Items</th>
+      <th scope="col">Expenditure</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Donuts</th>
+      <td>3,000</td>
+    </tr>
+    <tr>
+      <th scope="row">Stationery</th>
+      <td>18,000</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row">Totals</th>
+      <td>21,000</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+### JSON
+
+```json
+{
+  "role": ["table"],
+  "children": [
+    {
+      "role": ["tableHead"],
+      "children": [
+        { "role": ["row"], "children": [
+          { "role": ["columnheader"], "text": "Items" },
+          { "role": ["columnheader"], "text": "Expenditure" }
+        ]}
+      ]
+    },
+    {
+      "role": ["tableBody"],
+      "children": [
+        { "role": ["row"], "children": [
+          { "role": ["rowheader"], "text": "Donuts" },
+          { "role": ["cell"], "text": "3,000" }
+        ]},
+        { "role": ["row"], "children": [
+          { "role": ["rowheader"], "text": "Stationery" },
+          { "role": ["cell"], "text": "18,000" }
+        ]}
+      ]
+    },
+    {
+      "role": ["tableFooter"],
+      "children": [
+        { "role": ["row"], "children": [
+          { "role": ["rowheader"], "text": "Totals" },
+          { "role": ["cell"], "text": "21,000" }
+        ]}
+      ]
+    }
+  ]
+}
+```
+
+### Read-aloud output
+
+* Table with 2 columns and 4 rows.
+* Items: Donuts. Expenditure: 3,000.
+* Items: Stationery. Expenditure: 18,000.
+* Footer: Totals. 21,000.
+* End of table.
+
+## Table cell spans
+
+### HTML
+
+```html
+<table>
+  <caption>Weekly stock check</caption>
+  <thead>
+    <tr>
+      <th scope="col">Category</th>
+      <th scope="col">Item</th>
+      <th scope="col">Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" rowspan="2">Bakery</th>
+      <td>Donuts</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>Bagels</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">No stock movement reported for Produce this week.</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+### JSON
+
+```json
+{
+  "role": ["table"],
+  "children": [
+    {
+      "role": ["tableHead"],
+      "children": [
+        { "role": ["row"], "children": [
+          { "role": ["columnheader"], "text": "Category" },
+          { "role": ["columnheader"], "text": "Item" },
+          { "role": ["columnheader"], "text": "Quantity" }
+        ]}
+      ]
+    },
+    {
+      "role": ["tableBody"],
+      "children": [
+        { "role": ["row"], "children": [
+          { "role": ["rowheader"], "rowspan": 2, "text": "Bakery" },
+          { "role": ["cell"], "text": "Donuts" },
+          { "role": ["cell"], "text": "12" }
+        ]},
+        { "role": ["row"], "children": [
+          { "role": ["cell"], "text": "Bagels" },
+          { "role": ["cell"], "text": "8" }
+        ]}
+      ]
+    },
+    {
+      "role": ["tableFooter"],
+      "children": [
+        { "role": ["row"], "children": [
+          { "role": ["cell"], "colspan": 3, "text": "No stock movement reported for Produce this week." }
+        ]}
+      ]
+    }
+  ]
+}
+```
+
+### Read-aloud output
+
+* Table with 3 columns and 4 rows.
+* Category: Bakery. Item: Donuts. Quantity: 12.
+* Category: Bakery. Item: Bagels. Quantity: 8.
+* Footer: No stock movement reported for Produce this week.
+* End of table.

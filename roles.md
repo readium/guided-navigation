@@ -39,6 +39,9 @@
 | `separator` | | `separator` | `<hr>` | Indicates the element is a divider that separates and distinguishes sections of content or groups of menuitems. |
 | `summary` | | | `<summary>` | A summary of an element contained in details. |
 | `table` | [`table`](https://www.w3.org/TR/epub-ssv-11/#sec-tables) | `table` | `<table>` | A structure containing data or content laid out in tabular form. |
+| `tableHead` | | | `<thead>` | Section of the table holding header rows. |
+| `tableBody` | | | `<tbody>` | Section of the table holding body rows. |
+| `tableFooter` | | | `<tfoot>` | Section of the table holding footer rows. |
 | `term` | [`glossterm`](https://w3c.github.io/epub-specs/epub33/ssv/#h_glossaries) | `term` | `<dfn>` or `<dt>` | A word or phrase with a corresponding definition.|
 | `video` | | | `<video>` | Embedded videos, movies, or audio files with captions in a document.|
 
@@ -134,6 +137,9 @@
     * `bubble`
     * `sound`
 * `table`
+  * `tableHead`
+  * `tableBody`
+  * `tableFooter`
   * `columnheader`
   * `rowheader`
   * `row`
